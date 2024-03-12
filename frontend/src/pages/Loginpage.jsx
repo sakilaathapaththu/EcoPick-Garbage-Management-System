@@ -13,8 +13,42 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+// import axios from "axios";
+// import { Link } from "react-router-dom";
 
 function Copyright(props: any) {
+  // const [data, setData] = useState({ email: "", password: "" });
+	// const [error, setError] = useState("");
+
+  //   const handleChange = ({ currentTarget: input }) => {
+	// 	setData({ ...data, [input.name]: input.value });
+	// }
+
+  //   const handleSubmit = async (e) => {
+	// 	e.preventDefault();
+	// 	try {
+  //           if(data.email === "admin@gmail.com" && data.password === "admin"){
+  //               window.location = "/Admin";
+  //           }
+  //           else{
+  //           const url = "http://localhost:5000/api/auth";
+	// 		const { data: res } = await axios.post(url, data);
+	// 		localStorage.setItem("token", res.data);
+	// 		window.location = "/home";
+  //           }
+			
+	// 	} catch (error) {
+	// 		if (
+  //               error.response &&
+  //               error.response.status >= 400 &&
+  //               error.response.status <= 500
+  //           ) {
+  //               setError(error.response.data.message);
+  //           } else {
+  //               setError(error.response.data);
+  //           }
+	// 	}
+	// };
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
@@ -97,7 +131,7 @@ export default function () {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/Signup" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
