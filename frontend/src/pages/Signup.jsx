@@ -112,7 +112,7 @@ export default function Signup() {
                 required
                 fullWidth
                 name="re-password"
-                label="Re-Password"
+                label="Rle-Password"
                 type="re-password"
                 id="re-password"
                 autoComplete="re-new-password"
