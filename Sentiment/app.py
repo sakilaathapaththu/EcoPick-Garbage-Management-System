@@ -17,7 +17,7 @@ def index():
     data['positive'] = positive
     data['negative'] = negative
 
-    logging.info('============== OPEN HOME PAGE =================')
+    logging.info('============== OPEN FEEDBACK PAGE =================')
 
 
     return render_template('index.html', data = data)

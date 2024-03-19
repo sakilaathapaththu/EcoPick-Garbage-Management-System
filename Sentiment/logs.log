@@ -1,7 +1,26 @@
-2024-03-16 19:14:10,426 - INFO - Flask server started
-2024-03-16 19:14:10,430 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-03-19 13:43:08,229 - INFO - Flask server started
+2024-03-19 13:43:08,232 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2024-03-16 19:14:10,430 - INFO - [33mPress CTRL+C to quit[0m
-2024-03-16 19:14:12,276 - INFO - ============== OPEN HOME PAGE =================
-2024-03-16 19:14:12,279 - INFO - 127.0.0.1 - - [16/Mar/2024 19:14:12] "GET / HTTP/1.1" 200 -
-2024-03-16 19:14:12,288 - INFO - 127.0.0.1 - - [16/Mar/2024 19:14:12] "[36mGET /static/products/project%20img%203.jpg HTTP/1.1[0m" 304 -
+2024-03-19 13:43:08,232 - INFO - [33mPress CTRL+C to quit[0m
+2024-03-19 13:43:11,335 - INFO - ============== OPEN HOME PAGE =================
+2024-03-19 13:43:11,338 - INFO - 127.0.0.1 - - [19/Mar/2024 13:43:11] "GET / HTTP/1.1" 200 -
+2024-03-19 13:43:11,347 - INFO - 127.0.0.1 - - [19/Mar/2024 13:43:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-03-19 13:43:11,348 - INFO - 127.0.0.1 - - [19/Mar/2024 13:43:11] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-03-19 13:44:41,756 - INFO - Preprocessed Text : 0    good best nice work
+Name: tweet, dtype: object
+2024-03-19 13:44:41,758 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-03-19 13:44:41,759 - INFO -  Prediction : positive
+2024-03-19 13:44:41,760 - INFO - 127.0.0.1 - - [19/Mar/2024 13:44:41] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-03-19 13:44:41,769 - INFO - ============== OPEN HOME PAGE =================
+2024-03-19 13:44:41,770 - INFO - 127.0.0.1 - - [19/Mar/2024 13:44:41] "GET / HTTP/1.1" 200 -
+2024-03-19 13:44:41,779 - INFO - 127.0.0.1 - - [19/Mar/2024 13:44:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-03-19 13:44:41,782 - INFO - 127.0.0.1 - - [19/Mar/2024 13:44:41] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-03-19 13:46:38,327 - INFO - Preprocessed Text : 0    good nice servic
+Name: tweet, dtype: object
+2024-03-19 13:46:38,329 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-03-19 13:46:38,330 - INFO -  Prediction : positive
+2024-03-19 13:46:38,331 - INFO - 127.0.0.1 - - [19/Mar/2024 13:46:38] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-03-19 13:46:38,340 - INFO - ============== OPEN HOME PAGE =================
+2024-03-19 13:46:38,341 - INFO - 127.0.0.1 - - [19/Mar/2024 13:46:38] "GET / HTTP/1.1" 200 -
+2024-03-19 13:46:38,349 - INFO - 127.0.0.1 - - [19/Mar/2024 13:46:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-03-19 13:46:38,353 - INFO - 127.0.0.1 - - [19/Mar/2024 13:46:38] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
