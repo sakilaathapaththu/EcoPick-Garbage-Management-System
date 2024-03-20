@@ -9,7 +9,8 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-
+import AddIcon from '@mui/icons-material/Add';
+import FeedbackIcon from '@mui/icons-material/Feedback';
 
 
 export const mainListItems = (
@@ -22,15 +23,15 @@ export const mainListItems = (
       </ListItemButton>
       <ListItemButton>
         <ListItemIcon>
-          <ShoppingCartIcon />
+          <AddIcon/>
         </ListItemIcon>
-        <ListItemText primary="Orders" />
+        <ListItemText primary="Add Collecting Details" />
       </ListItemButton>
       <ListItemButton>
         <ListItemIcon>
-          <PeopleIcon />
+          <FeedbackIcon />
         </ListItemIcon>
-        <ListItemText primary="Customers" />
+        <ListItemText primary="View Feedback" />
       </ListItemButton>
       <ListItemButton>
         <ListItemIcon>

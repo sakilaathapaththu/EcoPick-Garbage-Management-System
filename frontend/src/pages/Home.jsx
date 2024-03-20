@@ -11,6 +11,7 @@ import slide01 from "../assets/images/slide01.jpg";
 import feedbackpic from "../assets/images/feedback.jpg";
 import contactuspic from "../assets/images/contactus.jpg";
 import aboutuspic from "../assets/images/aboutus.jpg";
+import { Link } from "react-router-dom";
 
 const title01 = "View Tracking ";
 const title02 = "Add Feedback ";
@@ -38,7 +39,7 @@ export default function Home() {
         >
           <Grid item xs={2} sm={3} md={3}>
             <Item>
-              <CardComponent images={slide01} title={title01} />
+              <CardComponent images={slide01} title={title01} url={'/Tracking'} />
             </Item>
           </Grid>
           <Grid item xs={2} sm={3} md={3}>
@@ -60,4 +61,5 @@ export default function Home() {
       </Box>
     </Box>
   );
+ 
 }

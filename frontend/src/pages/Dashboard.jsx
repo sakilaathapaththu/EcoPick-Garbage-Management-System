@@ -20,7 +20,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems } from '../components/Dashboard/Listitemname';
 // import { mainListItems, secondaryListItems } from '../components/Dashboard/Listitemname';
-// import Chart from './Chart';
+import Chart from '../components/Dashboard/Chart';
 // import Deposits from './Deposits';
 // import Orders from './Orders';
 
@@ -113,9 +113,9 @@ export default function Dashboard() {
             Dashboard
           </Typography>
           <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
+            {/* <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
-            </Badge>
+            </Badge> */}
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -164,7 +164,7 @@ export default function Dashboard() {
                   height: 240,
                 }}
               >
-                {/* <Chart /> */}
+                <Chart />
               </Paper>
             </Grid>
             {/* Recent Deposits */}
