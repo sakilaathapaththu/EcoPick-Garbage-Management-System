@@ -19,15 +19,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems } from '../components/Dashboard/Listitemname';
-// import { mainListItems, secondaryListItems } from '../components/Dashboard/Listitemname';
 
-import Chart from '../components/Dashboard/Chart';
-// import Deposits from './Deposits';
-// import Orders from './Orders';
+import  Addlocationdetails from '../components/Dashboard/Addlocationdetails.jsx';
+import Addfillingdetail from '../components/Dashboard/Addfillingdetail.jsx';
 
 
-  
-  const drawerWidth = 240;
+const drawerWidth = 240;
   
   const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
@@ -75,10 +72,8 @@ import Chart from '../components/Dashboard/Chart';
   
   // TODO remove, this demo shouldn't need to reset the theme.
   const defaultTheme = createTheme();
-
-
-export default function Dashboard() {
-    const [open, setOpen] = useState();
+export default function Addcollectingdata() {
+  const [open, setOpen] = useState();
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -156,30 +151,30 @@ export default function Dashboard() {
         <Toolbar />
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
           <Grid container spacing={3}>
-            {/* Chart */}
-            <Grid item xs={12} md={8} lg={9}>
+            {/* Add loaction details */}
+            <Grid item xs={12} md={6} lg={6}>
               <Paper
                 sx={{
                   p: 2,
                   display: 'flex',
                   flexDirection: 'column',
-                  height: 240,
+                  height: 'auto',
                 }}
               >
-                <Chart />
+                <Addlocationdetails />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={3}>
+            {/* Addfillingdetail */}
+            <Grid item xs={12} md={6} lg={6}>
               <Paper
                 sx={{
                   p: 2,
                   display: 'flex',
                   flexDirection: 'column',
-                  height: 240,
+                  height: 'auto',
                 }}
               >
-                {/* <Deposits /> */}
+                <Addfillingdetail />
                 
               </Paper>
             </Grid>

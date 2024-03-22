@@ -27,7 +27,7 @@ const Item = styled(Box)(({ theme }) => ({
 
 export default function Home() {
   return (
-    <Box sx={{ flexGrow: 1, mt: "0%", ml: 1, mr: 1 }}>
+    <Box sx={{ flexGrow: 1, mt: "4%", ml: 1, mr: 1 }}>
       <Box>
         <Corousel />
       </Box>

@@ -26,4 +26,9 @@ router.get('/get/data-location', async (req, res) => {
     }
 });
 
+
+
+//Insert Location details 
+
+
 module.exports = router;

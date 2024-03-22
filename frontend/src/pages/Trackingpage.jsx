@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import axios from "axios";
-
-import { PieChart } from "@mui/x-charts/PieChart";
-
+import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import TrackingCardview from "../components/Tracking/TrackingCardview";
+
+
+
 
 
 
 const libraries = ["places"];
 const mapContainerStyle = {
   width: "50vw",
-  height: "50vh",
+  height: "100vh",
 };
 
 const Trackingpage = () => {
@@ -60,9 +56,9 @@ const Trackingpage = () => {
   }
 
   return (
-    <Box sx={{ flexGrow: 1, marginTop: 3 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={8}>
+    <Box sx={{ flexGrow: 1, marginTop: 10 }}>
+      <Grid container spacing={3}>
+        <Grid item xs={7}>
           <GoogleMap
             mapContainerStyle={mapContainerStyle}
             zoom={10}
@@ -71,8 +67,9 @@ const Trackingpage = () => {
             {marker && <Marker position={marker} />}
           </GoogleMap>
         </Grid>
-        <Grid item xs={4}>
-        
+        <Grid item xs={5}>
+
+        <TrackingCardview />
        
         </Grid>
       </Grid>
