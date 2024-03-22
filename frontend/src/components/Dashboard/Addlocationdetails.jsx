@@ -8,6 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import axios from "axios";
+import Typography from "@mui/material/Typography";
 
 const Addlocationdetails = () => {
   const [formData, setFormData] = useState({
@@ -52,6 +53,17 @@ const Addlocationdetails = () => {
   return (
     <Box component="form" onSubmit={handleSubmit} noValidate>
       <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <Typography
+            component="h1"
+            // variant="h6"
+            color="inherit"
+            noWrap
+            sx={{ flexGrow: 1 }}
+          >
+            Adding Location Details
+          </Typography>
+        </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
             autoComplete="given-name"

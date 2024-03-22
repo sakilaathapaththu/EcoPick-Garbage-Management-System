@@ -15,13 +15,11 @@ import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import CanvasJSReact from '@canvasjs/react-charts';
+import TrackingFillingdetails from "./TrackingFillingdetails";
 
 
 
-//charts
-var CanvasJS = CanvasJSReact.CanvasJS;
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -45,7 +43,7 @@ export default function TrackingCardview() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8800/Api/Addcollectingdata//last/collectingdetail"
+          "http://localhost:8800/Api/Addcollectingdata/last/collectingdetail"
         );
         setDetails(response.data);
       } catch (error) {
@@ -60,31 +58,7 @@ export default function TrackingCardview() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  //chars 
-  const [options, setOptions] = useState({
-    theme: "dark2",
-    animationEnabled: true,
-    exportFileName: "New Year Resolutions",
-    exportEnabled: true,
-    title: {
-      text: "",
-    },
-    data: [
-      {
-        type: "pie",
-        showInLegend: true,
-        legendText: "{label}",
-        toolTipContent: "{label}: <strong>{y}%</strong>",
-        indexLabel: "{y}%",
-        indexLabelPlacement: "inside",
-        dataPoints: [
-          { y: 32, label: "Total Capacity" },
-          { y: 22, label: "Empty Capacity" },
-          { y: 15, label: "Filled Capacity " }
-        ],
-      },
-    ],
-  });
+  
 
   return (
     <Card sx={{ maxWidth: 450 }}>
@@ -109,15 +83,7 @@ export default function TrackingCardview() {
           <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
             Type: {details.garbageType.join(", ")}
           </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
-            Total Capacity: {details.totalCapacity}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
-            Filled Capacity: {details.filledCapacity}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
-            Empty Capacity: {details.emptyCapacity}
-          </Typography>
+          
         </React.Fragment>
       ) : (
         <Typography variant="body2" color="text.secondary">
@@ -140,12 +106,7 @@ export default function TrackingCardview() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-        <div>
-			<CanvasJSChart options = {options}
-				/* onRef={ref => this.chart = ref} */
-			/>
-			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
-		</div>
+        <TrackingFillingdetails/>
         </CardContent>
       </Collapse>
     </Card>
