@@ -35,31 +35,49 @@ export default function Loginpage() {
 		setData({ ...data, [input.name]: input.value });
 	}
 
-    const handleSubmit = async (e) => {
-		e.preventDefault();
-		try {
-            if(data.email === "admin@gmail.com" && data.password === "admin"){
-                window.location = "/Dashboard";
-            }
-            else{
-            const url = "http://localhost:8800/api/auth";
-			const { data: res } = await axios.post(url, data);
-			localStorage.setItem("token", res.data);
-			window.location = "/Home";
-            }
+  //   const handleSubmit = async (e) => {
+	// 	e.preventDefault();
+	// 	try {
+  //           if(data.email === "admin@gmail.com" && data.password === "admin"){
+  //               window.location = "/Dashboard";
+  //           }
+  //           else{
+  //           const url = "http://localhost:8800/api/auth";
+	// 		const { data: res } = await axios.post(url, data);
+	// 		localStorage.setItem("token", res.data);
+	// 		window.location = "/Home";
+  //           }
 			
-		} catch (error) {
-			if (
-                error.response &&
-                error.response.status >= 400 &&
-                error.response.status <= 500
-            ) {
-                setError(error.response.data.message);
-            } else {
-                setError(error.response.data);
-            }
-		}
-	};
+	// 	} catch (error) {
+	// 		if (
+  //               error.response &&
+  //               error.response.status >= 400 &&
+  //               error.response.status <= 500
+  //           ) {
+  //               setError(error.response.data.message);
+  //           } else {
+  //               setError(error.response.data);
+  //           }
+	// 	}
+	// };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+       
+        if (data.email === "admin@gmail.com" && data.password === "admin") {
+            window.location = "/Dashboard";
+        } else {
+          const url = "http://localhost:8800/api/auth";
+          const { data: res } = await axios.post(url, data);
+            localStorage.setItem("token", res.data.token);
+            localStorage.setItem("user", JSON.stringify(res.data.user));
+            window.location = "/Home";
+        }
+    } catch (error) {
+        setError(error.response.data.message);
+    }
+};
+
   return (
     <ThemeProvider theme={defaultTheme} >
       <Container component="main" maxWidth="xs">
@@ -113,7 +131,8 @@ export default function Loginpage() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              
+              sx={{ mt: 3, mb: 2 ,backgroundColor: '#347C2C'}}
             >
               Sign In
             </Button>

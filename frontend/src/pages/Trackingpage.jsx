@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
 import TrackingCardview from "../components/Tracking/TrackingCardview";
-
+import Footer from "../components/Footer/Footer";
 
 
 
@@ -56,6 +56,7 @@ const Trackingpage = () => {
   }
 
   return (
+    <div>
     <Box sx={{ flexGrow: 1, marginTop: 10 }}>
       <Grid container spacing={3}>
         <Grid item xs={7}>
@@ -74,6 +75,8 @@ const Trackingpage = () => {
         </Grid>
       </Grid>
     </Box>
+    <Footer/>
+    </div>
   );
 };
 

@@ -4,35 +4,73 @@ const joi = require("joi");
 const bcrypt = require("bcryptjs");
 
 
-router.post("/",async(req,res) => {
-    try{
-        const { error } = validate(req.body);
-        if(error)
-            return res.status(400).send({ message:error.details[0].message });
+// router.post("/",async(req,res) => {
+//     try{
+//         const { error } = validate(req.body);
+//         if(error)
+//             return res.status(400).send({ message:error.details[0].message });
         
-        //Check if user exists
-        const user = await User.findOne({ email: req.body.email });
-        if(!user)
-            return res.status(401).send({ message:"Invalid email or password" });
+//         //Check if user exists
+//         const user = await User.findOne({ email: req.body.email });
+//         if(!user)
+//             return res.status(401).send({ message:"Invalid email or password" });
 
-        //check password
-        const validPassword = await bcrypt.compare(
-            req.body.password, user.password
-        );
-        if(!validPassword)
-            return res.status(401).send({ message: "Invalid email or password"});
+//         //check password
+//         const validPassword = await bcrypt.compare(
+//             req.body.password, user.password
+//         );
+//         if(!validPassword)
+//             return res.status(401).send({ message: "Invalid email or password"});
 
-        //Generate web token
-        const token = user.generateAuthToken();
-        res.status(200).send({ data:token, message:"Logged in successfully"})
+//         //Generate web token
+//         const token = user.generateAuthToken();
+//         res.status(200).send({ data:token, message:"Logged in successfully"})
 
     
-    }catch(error){
-        console.error(error);
-        res.status(500).send({ message:"Internal server error"});
-    }
-})
+//     }catch(error){
+//         console.error(error);
+//         res.status(500).send({ message:"Internal server error"});
+//     }
+// })
+router.post("/", async (req, res) => {
+    try {
+        const { error } = validate(req.body);
+        if (error)
+            return res.status(400).send({ message: error.details[0].message });
 
+        // Check if user exists
+        const user = await User.findOne({ email: req.body.email });
+        if (!user)
+            return res.status(401).send({ message: "Invalid email or password" });
+
+        // Check password
+        const validPassword = await bcrypt.compare(req.body.password, user.password);
+        if (!validPassword)
+            return res.status(401).send({ message: "Invalid email or password" });
+
+        // Generate web token
+        const token = user.generateAuthToken();
+        res.status(200).send({ data: { token, user }, message: "Logged in successfully" });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({ message: "Internal server error" });
+    }
+});
+
+//get user using user id 
+router.get("/profile/:id", async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        if (!user)
+            return res.status(404).send({ message: "User not found" });
+
+        res.status(200).send(user);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({ message: "Internal server error" });
+    }
+});
 const validate = (data) => {
     const schema = joi.object({
         email:joi.string().email().required().label("Email"),

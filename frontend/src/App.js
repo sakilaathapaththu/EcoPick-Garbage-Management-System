@@ -7,6 +7,8 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Trackingpage from "./pages/Trackingpage";
 import Addcollectingdata from './pages/Addcollectingdata';
+import Profilepage from "./pages/Profilepage";
+
 
 function App() {
   return (
@@ -30,7 +32,7 @@ function AppRouter() {
     if (isHiddenPath(location.pathname)) {
       return null; // Hide Navbar
     } else {
-      return <Navbar />;
+      return <Navbar /> ;
     }
   };
 
@@ -44,12 +46,15 @@ function AppRouter() {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Tracking" element={<Trackingpage />} />
         <Route path="/Addcollectingdata" element={<Addcollectingdata/>} />
+        <Route path="/Profile" element={<Profilepage/>} />
         
        
         
         {/* Set default route to the Login page */}
         <Route path="/" element={<Login />} />
       </Routes>
+
+      
     </>
   );
 }
