@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const joi = require("joi")
 const passwordComplexity = require("joi-password-complexity");
+require("dotenv").config({ path: "../config.env" });
 
 const userSchema = new mongoose.Schema({
     firstName:{
@@ -28,13 +29,20 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true
     },  
+    registrationDate: {
+        type: Date,
+        default: Date.now
+    }
 });
 
 //Generate web token for user
-userSchema.methods.generateAuthToken = function(){
-    const token = jwt.sign({_id:this._id},process.env.JWTPRIVATEKEY,{expiresIn:"7d"})
-    return token
-};
+
+
+// Inside your User schema or model
+userSchema.methods.generateAuthToken = function() {
+    const token = jwt.sign({ _id: this._id }, process.env.JWT_SECRET_KEY); // Use process.env.JWT_SECRET_KEY as the secret key
+    return token;
+}
 
 const User = mongoose.model("user",userSchema);
 

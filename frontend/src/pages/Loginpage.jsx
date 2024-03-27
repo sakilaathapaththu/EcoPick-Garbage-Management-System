@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,28 +15,37 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-// import axios from "axios";
-// import { Link } from "react-router-dom";
+import {API_BASE_URL} from '../utils/constants'
 
-function Copyright(props: any) {
-  // const [data, setData] = useState({ email: "", password: "" });
-	// const [error, setError] = useState("");
+const defaultTheme = createTheme();
 
-  //   const handleChange = ({ currentTarget: input }) => {
-	// 	setData({ ...data, [input.name]: input.value });
-	// }
+export default function Loginpage() {
+  // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   console.log({
+  //     email: data.get('email'),
+  //     password: data.get('password'),
+  //   });
+  // };
+ const [data, setData] = useState({ email: "", password: "" });
+	const [error, setError] = useState("");
+
+    const handleChange = ({ currentTarget: input }) => {
+		setData({ ...data, [input.name]: input.value });
+	}
 
   //   const handleSubmit = async (e) => {
 	// 	e.preventDefault();
 	// 	try {
   //           if(data.email === "admin@gmail.com" && data.password === "admin"){
-  //               window.location = "/Admin";
+  //               window.location = "/Dashboard";
   //           }
   //           else{
-  //           const url = "http://localhost:5000/api/auth";
+  //           const url = "http://localhost:8800/api/auth";
 	// 		const { data: res } = await axios.post(url, data);
 	// 		localStorage.setItem("token", res.data);
-	// 		window.location = "/home";
+	// 		window.location = "/Home";
   //           }
 			
 	// 	} catch (error) {
@@ -49,37 +60,31 @@ function Copyright(props: any) {
   //           }
 	// 	}
 	// };
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="#">
-        BlackCode
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
-export default function () {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+       
+        if (data.email === "admin@gmail.com" && data.password === "admin") {
+            window.location = "/Dashboard";
+        } else {
+          const url = "http://localhost:8800/api/auth";
+          const { data: res } = await axios.post(url, data);
+            localStorage.setItem("token", res.data.token);
+            localStorage.setItem("user", JSON.stringify(res.data.user));
+            window.location = "/Home";
+        }
+    } catch (error) {
+        setError(error.response.data.message);
+    }
+};
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={defaultTheme} >
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 12,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -91,7 +96,8 @@ export default function () {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box >
+          <form  onSubmit={handleSubmit} >
             <TextField
               margin="normal"
               required
@@ -101,6 +107,8 @@ export default function () {
               name="email"
               autoComplete="email"
               autoFocus
+              onChange={handleChange} 
+              value={data.email}
             />
             <TextField
               margin="normal"
@@ -110,20 +118,25 @@ export default function () {
               label="Password"
               type="password"
               id="password"
-              autoComplete="current-password"
+              // autoComplete="current-password"
+              onChange={handleChange} 
+              value={data.password}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+            
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              
+              sx={{ mt: 3, mb: 2 ,backgroundColor: '#347C2C'}}
             >
               Sign In
             </Button>
+            </form>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
@@ -138,8 +151,9 @@ export default function () {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
+        {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
       </Container>
     </ThemeProvider>
-  );
+  )
 }
+

@@ -5,20 +5,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from "react-router-dom";
 
-
-export default function card({
-    images,
-    title
-}) {
-    
+export default function card({ images, title, url }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image={images}
-        title="green iguana"
-      />
+      <CardMedia sx={{ height: 140 }} image={images} title="green iguana" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
@@ -29,8 +21,9 @@ export default function card({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Go</Button>
-       
+        <Link to={url} style={{ textDecoration: "none" }}>
+          <Button size="small">Go</Button>
+        </Link>
       </CardActions>
     </Card>
   )
