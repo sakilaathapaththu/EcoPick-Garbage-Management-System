@@ -9,6 +9,7 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import axios from "axios";
 import Typography from "@mui/material/Typography";
+import { API_BASE_URL } from "../../utils/constants";
 
 const Addlocationdetails = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const Addlocationdetails = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8800/Api/Addcollectingdata/add/collectingdetail",
+        `${API_BASE_URL}/Api/Addcollectingdata/add/collectingdetail`,
         formData
       );
       console.log(response.data); // Log the response from the server

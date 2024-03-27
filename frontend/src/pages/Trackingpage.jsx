@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 
 import TrackingCardview from "../components/Tracking/TrackingCardview";
 import Footer from "../components/Footer/Footer";
-
+import { API_BASE_URL } from "../utils/constants";
 
 
 
@@ -29,7 +29,7 @@ const Trackingpage = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8800/api/get/data-location"
+          `${API_BASE_URL}/api/get/data-location`
         );
         if (response.data && response.data.length > 0) {
           const { latitude, longitude } = response.data[0];

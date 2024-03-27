@@ -14,8 +14,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { API_BASE_URL } from "../utils/constants";
 
-import {API_BASE_URL} from '../utils/constants'
 
 const defaultTheme = createTheme();
 
@@ -67,7 +67,7 @@ export default function Loginpage() {
         if (data.email === "admin@gmail.com" && data.password === "admin") {
             window.location = "/Dashboard";
         } else {
-          const url = "http://localhost:8800/api/auth";
+          const url = `${API_BASE_URL}/api/auth`;
           const { data: res } = await axios.post(url, data);
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("user", JSON.stringify(res.data.user));

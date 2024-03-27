@@ -16,6 +16,7 @@ import Typography from "@mui/material/Typography";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CanvasJSReact from "@canvasjs/react-charts";
+import { API_BASE_URL } from "../../utils/constants";
 
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
@@ -63,7 +64,7 @@ export default function TrackingFillingdetails() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8800/Api/Fillingdetails//last/fillingdetail"
+          `${API_BASE_URL}/Api/Fillingdetails//last/fillingdetail`
         );
         setDetails(response.data);
         // Update pie chart dataPoints
