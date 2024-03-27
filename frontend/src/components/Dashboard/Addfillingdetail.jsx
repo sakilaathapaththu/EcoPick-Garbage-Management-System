@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Typography from '@mui/material/Typography';
 import axios from "axios";
+import { API_BASE_URL } from "../../utils/constants";
 
 export default function Addfillingdetail() {
   const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ export default function Addfillingdetail() {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8800/Api/Fillingdetails/add/fillingdetail",
+        `${API_BASE_URL}/Api/Fillingdetails/add/fillingdetail`,
         formData
       );
       console.log(response.data); // Log the response from the server

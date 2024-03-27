@@ -14,6 +14,7 @@ import Typography from "@mui/material/Typography";
 import testpic from "../assets/images/profile.jpeg";
 import DeleteIcon from "@mui/icons-material/Delete";
 import TextField from '@mui/material/TextField';
+import { API_BASE_URL } from "../utils/constants";
 
 export default function Profilepage() {
   const [user, setUser] = useState(null);
@@ -24,7 +25,7 @@ export default function Profilepage() {
       const userId = JSON.parse(localStorage.getItem("user"))._id;
       try {
         const { data } = await axios.get(
-          `http://localhost:8800/api/auth/profile/${userId}`,
+          `${API_BASE_URL}/api/auth/profile/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

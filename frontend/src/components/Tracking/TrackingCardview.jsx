@@ -16,7 +16,7 @@ import Typography from "@mui/material/Typography";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import TrackingFillingdetails from "./TrackingFillingdetails";
-
+import { API_BASE_URL } from "../../utils/constants";
 
 
 
@@ -43,7 +43,7 @@ export default function TrackingCardview() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8800/Api/Addcollectingdata/last/collectingdetail"
+          `${API_BASE_URL}/Api/Addcollectingdata/last/collectingdetail`
         );
         setDetails(response.data);
       } catch (error) {
