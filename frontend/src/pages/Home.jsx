@@ -11,6 +11,8 @@ import slide01 from "../assets/images/slide01.jpg";
 import feedbackpic from "../assets/images/feedback.jpg";
 import contactuspic from "../assets/images/contactus.jpg";
 import aboutuspic from "../assets/images/aboutus.jpg";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer/Footer";
 
 const title01 = "View Tracking ";
 const title02 = "Add Feedback ";
@@ -26,7 +28,8 @@ const Item = styled(Box)(({ theme }) => ({
 
 export default function Home() {
   return (
-    <Box sx={{ flexGrow: 1, mt: "0%", ml: 1, mr: 1 }}>
+    <div>
+    <Box sx={{ flexGrow: 1, mt: "4%", ml: 1, mr: 1 }}>
       <Box>
         <Corousel />
       </Box>
@@ -38,7 +41,7 @@ export default function Home() {
         >
           <Grid item xs={2} sm={3} md={3}>
             <Item>
-              <CardComponent images={slide01} title={title01} />
+              <CardComponent images={slide01} title={title01} url={'/Tracking'} />
             </Item>
           </Grid>
           <Grid item xs={2} sm={3} md={3}>
@@ -58,6 +61,10 @@ export default function Home() {
           </Grid>
         </Grid>
       </Box>
+     
     </Box>
+     <Footer/>
+     </div>
   );
+ 
 }
