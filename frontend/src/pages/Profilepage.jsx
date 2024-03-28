@@ -13,11 +13,12 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import testpic from "../assets/images/profile.jpeg";
 import DeleteIcon from "@mui/icons-material/Delete";
-import TextField from '@mui/material/TextField';
+import TextField from "@mui/material/TextField";
 import { API_BASE_URL } from "../utils/constants";
 
 export default function Profilepage() {
   const [user, setUser] = useState(null);
+  const [profileImage, setProfileImage] = useState(null);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -39,13 +40,19 @@ export default function Profilepage() {
     };
     fetchUser();
   }, []);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setProfileImage(file);
+  };
+
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
     ...theme.typography.body2,
     padding: theme.spacing(1),
-
     color: theme.palette.text.secondary,
   }));
+
   return (
     <div>
       <Box sx={{ flexGrow: 1, mt: 15 }}>
@@ -57,7 +64,9 @@ export default function Profilepage() {
                 component="img"
                 alt="Profile Image"
                 maxWidth="100"
-                image={testpic}
+                image={
+                  profileImage ? URL.createObjectURL(profileImage) : testpic
+                }
                 sx={{
                   mt: 5,
                   width: 150, // Adjust the width as needed
@@ -93,9 +102,18 @@ export default function Profilepage() {
                 )}
               </CardContent>
               <CardActions sx={{ justifyContent: "center" }}>
-                <Button variant="contained" color="success">
-                  Edit
-                </Button>
+                <input
+                  accept="image/*"
+                  id="profile-image-input"
+                  type="file"
+                  onChange={handleImageChange}
+                  style={{ display: "none" }}
+                />
+                <label htmlFor="profile-image-input">
+                  <Button variant="contained" component="span">
+                    Upload Image
+                  </Button>
+                </label>
                 <Button
                   variant="outlined"
                   startIcon={<DeleteIcon />}
@@ -108,9 +126,8 @@ export default function Profilepage() {
           </Grid>
 
           <Grid item xs={6}>
-          {user && (
-            <Item>
-              
+            {user && (
+              <Item>
                 <Typography
                   gutterBottom
                   variant="h5"
@@ -119,73 +136,71 @@ export default function Profilepage() {
                 >
                   Welcome, {user.firstName} {user.lastName}
                 </Typography>
-              
 
-              <TextField
-                fullWidth
-                id="firstName"
-                label="First Name"
-                variant="outlined"
-                margin="normal"
-                value={user.firstName}
-                onChange={(e) =>
-                  setUser({ ...user, firstName: e.target.value })
-                }
-              />
+                <TextField
+                  fullWidth
+                  id="firstName"
+                  label="First Name"
+                  variant="outlined"
+                  margin="normal"
+                  value={user.firstName}
+                  onChange={(e) =>
+                    setUser({ ...user, firstName: e.target.value })
+                  }
+                />
 
-              <TextField
-                fullWidth
-                id="lastName"
-                label="Last Name"
-                variant="outlined"
-                margin="normal"
-                value={user.lastName}
-                onChange={(e) => setUser({ ...user, lastName: e.target.value })}
-              />
+                <TextField
+                  fullWidth
+                  id="lastName"
+                  label="Last Name"
+                  variant="outlined"
+                  margin="normal"
+                  value={user.lastName}
+                  onChange={(e) =>
+                    setUser({ ...user, lastName: e.target.value })
+                  }
+                />
 
-              <TextField
-                fullWidth
-                id="email"
-                label="Email"
-                variant="outlined"
-                margin="normal"
-                value={user.email}
-                onChange={(e) => setUser({ ...user, email: e.target.value })}
-              />
+                <TextField
+                  fullWidth
+                  id="email"
+                  label="Email"
+                  variant="outlined"
+                  margin="normal"
+                  value={user.email}
+                  onChange={(e) => setUser({ ...user, email: e.target.value })}
+                />
 
-              <TextField
-                fullWidth
-                id="contactNo"
-                label="Contact No"
-                variant="outlined"
-                margin="normal"
-                value={user.contactNo}
-                onChange={(e) =>
-                  setUser({ ...user, contactNo: e.target.value })
-                }
-              />
+                <TextField
+                  fullWidth
+                  id="contactNo"
+                  label="Contact No"
+                  variant="outlined"
+                  margin="normal"
+                  value={user.contactNo}
+                  onChange={(e) =>
+                    setUser({ ...user, contactNo: e.target.value })
+                  }
+                />
 
-              <TextField
-                fullWidth
-                id="address"
-                label="Address"
-                variant="outlined"
-                margin="normal"
-                value={user.address}
-                onChange={(e) => setUser({ ...user, address: e.target.value })}
-              />
-             
-            </Item>
+                <TextField
+                  fullWidth
+                  id="address"
+                  label="Address"
+                  variant="outlined"
+                  margin="normal"
+                  value={user.address}
+                  onChange={(e) =>
+                    setUser({ ...user, address: e.target.value })
+                  }
+                />
+                <Button variant="contained" color="success">
+                  Edit
+                </Button>
+              </Item>
             )}
           </Grid>
           <Grid item xs={1}></Grid>
-
-          {/* <Grid item xs={4}>
-            <Item>xs=4</Item>
-          </Grid>
-          <Grid item xs={8}>
-            <Item>xs=8</Item>
-          </Grid> */}
         </Grid>
       </Box>
 

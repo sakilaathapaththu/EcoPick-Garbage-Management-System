@@ -84,6 +84,7 @@ export default function TrackingCardview() {
             Type: {details.garbageType.join(", ")}
           </Typography>
           
+          
         </React.Fragment>
       ) : (
         <Typography variant="body2" color="text.secondary">
