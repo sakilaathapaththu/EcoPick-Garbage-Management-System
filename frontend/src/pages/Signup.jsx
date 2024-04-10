@@ -13,6 +13,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import Lottie from "react-lottie";
+import Registerimage from "../assets/animation/register.json";
 
 const defaultTheme = createTheme();
 
@@ -26,8 +28,32 @@ export default function Signup() {
         });
       };
   return (
-    <ThemeProvider theme={defaultTheme}>
-    <Container component="main" maxWidth="xs">
+   
+   
+    <Grid
+      container
+      spacing={2}
+      sx={{ height: "100vh",mt:'5%' }}
+    >
+      <Grid item xs={12} md={6}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Lottie
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: Registerimage,
+            }}
+          />
+        </Box>
+      </Grid>
+   
+      < Grid Container item xs={12} md={6} sx={{ bgcolor: "#DEFDE0" }} component="main">
       <CssBaseline />
       <Box
         sx={{
@@ -45,29 +71,30 @@ export default function Signup() {
         </Typography>
         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                autoComplete="given-name"
-                name="firstName"
-                required
-                fullWidth
-                id="firstName"
-                label="First Name"
-                autoFocus
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                required
-                fullWidth
-                id="lastName"
-                label="Last Name"
-                name="lastName"
-                autoComplete="family-name"
-              />
-            </Grid>
+          <Grid item xs={12} sm={6}>
+    <TextField
+      sx={{ width: "70%", ml: { xs: "17%", sm: "35%" } }} // Adjusted margin left for xs view
+      autoComplete="given-name"
+      name="firstName"
+      required
+      id="firstName"
+      label="First Name"
+      autoFocus
+    />
+  </Grid>
+  <Grid item xs={12} sm={6}>
+    <TextField
+      sx={{ width: "70%", ml: { xs: "17%", sm: "3%" } }} // Adjusted margin left for xs view
+      required
+      id="lastName"
+      label="Last Name"
+      name="lastName"
+      autoComplete="family-name"
+    />
+  </Grid>
             <Grid item xs={12}>
               <TextField
+              sx={{width:"70%",ml:"17%"}}
                 required
                 fullWidth
                 id="address"
@@ -78,6 +105,7 @@ export default function Signup() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+              sx={{width:"70%",ml:"17%"}}
                 required
                 fullWidth
                 id="contactno"
@@ -88,6 +116,7 @@ export default function Signup() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+              sx={{width:"70%",ml:"17%"}}
                 required
                 fullWidth
                 id="email"
@@ -98,6 +127,7 @@ export default function Signup() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+              sx={{width:"70%",ml:"17%"}}
                 required
                 fullWidth
                 name="password"
@@ -109,6 +139,7 @@ export default function Signup() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+              sx={{width:"70%",ml:"17%"}}
                 required
                 fullWidth
                 name="re-password"
@@ -118,7 +149,7 @@ export default function Signup() {
                 autoComplete="re-new-password"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12}  sx={{width:"70%",ml:"17%"}}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
                 label="I ."
@@ -129,13 +160,14 @@ export default function Signup() {
             type="submit"
             fullWidth
             variant="contained"
-            sx={{ mt: 3, mb: 2 }}
+            sx={{ mt: 3, mb: 2,width:"70%",ml:"17%" }}
+            
           >
             Sign Up
           </Button>
-          <Grid container justifyContent="flex-end">
-            <Grid item>
-              <Link href="/Login" variant="body2">
+          <Grid container justifyContent="flex-end" >
+            <Grid item >
+              <Link href="/Login" variant="body2" >
                 Already have an account? Sign in
               </Link>
             </Grid>
@@ -143,7 +175,9 @@ export default function Signup() {
         </Box>
       </Box>
       {/* <Copyright sx={{ mt: 5 }} /> */}
-    </Container>
-  </ThemeProvider>
+      </Grid>
+    </Grid>
+    
+ 
   )
 }
