@@ -24,9 +24,13 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton> */}
+          
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Link to="/Home" style={{color:'white', textDecoration: "none"}}>
           EcoPick
+          </Link>
           </Typography>
+          
           {user ? (
             <Link to="/Profile" style={{ textDecoration: "none", color: "white" }}>
               <Button color="inherit">{user.firstName}</Button>
