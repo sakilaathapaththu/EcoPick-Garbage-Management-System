@@ -5,10 +5,11 @@ const FillingDetail = require('../models/FillingDetail');
 
 router.post('/add/fillingdetail', async (req, res) => {
   try {
-    const { filledCapacity, emptyCapacity } = req.body;
+    const { filledCapacity, emptyCapacity,date } = req.body;
     const newFillingDetail = new FillingDetail({
       filledCapacity,
-      emptyCapacity
+      emptyCapacity,
+      date,
     });
     const savedFillingDetail = await newFillingDetail.save();
     res.json(savedFillingDetail);

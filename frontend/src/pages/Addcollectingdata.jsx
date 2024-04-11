@@ -179,11 +179,11 @@ export default function Addcollectingdata() {
               </Paper>
             </Grid>
             {/* Recent Orders */}
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                {/* <Orders /> */}
+                <Orders /> 
               </Paper>
-            </Grid>
+            </Grid> */}
           </Grid>
           <Box sx={{ pt: 4 }} />
         </Container>

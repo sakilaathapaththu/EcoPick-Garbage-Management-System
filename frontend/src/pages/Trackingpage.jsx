@@ -99,8 +99,8 @@ import TrackingCardview from "../components/Tracking/TrackingCardview";
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  width: "50vw",
-  height: "100vh",
+  width: "55vw",
+  height: "95vh",
 };
 
 const Trackingpage = () => {

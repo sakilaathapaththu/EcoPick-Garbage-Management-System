@@ -132,7 +132,7 @@
 // };
 
 // export default Addlocationdetails;
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -149,7 +149,8 @@ const Addlocationdetails = () => {
   const [formData, setFormData] = useState({
     startPoint: "",
     endPoint: "",
-    date: "",
+    // date: "",
+    date: new Date().toISOString().split("T")[0],
     garbageType: [],
   });
 
@@ -161,6 +162,14 @@ const Addlocationdetails = () => {
     { name: "Rajagiriya", coordinates: "6.909246272982172, 79.89611987096255" },
   ];
   const names = ["Organic waste", "Hazardous waste", "Recyclable waste"]; // Define the names array
+
+  useEffect(() => {
+    // Automatically set today's date in the date field
+    setFormData((prevData) => ({
+      ...prevData,
+      date: new Date().toISOString().split("T")[0],
+    }));
+  }, []);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -174,16 +183,20 @@ const Addlocationdetails = () => {
     event.preventDefault();
     try {
       // Extracting coordinates from the locations array based on selected names
-      const startPointObject = locations.find(location => location.name === formData.startPoint);
-      const endPointObject = locations.find(location => location.name === formData.endPoint);
-  
+      const startPointObject = locations.find(
+        (location) => location.name === formData.startPoint
+      );
+      const endPointObject = locations.find(
+        (location) => location.name === formData.endPoint
+      );
+
       const startPointCoordinates = startPointObject.coordinates;
       const endPointCoordinates = endPointObject.coordinates;
-  
+
       // Extracting latitude and longitude values
       const [startPointLat, startPointLong] = startPointCoordinates.split(", ");
       const [endPointLat, endPointLong] = endPointCoordinates.split(", ");
-  
+
       const response = await axios.post(
         `${API_BASE_URL}/Api/Addcollectingdata/add/collectingdetail`,
         {
@@ -193,7 +206,7 @@ const Addlocationdetails = () => {
           startPointLat,
           startPointLong,
           endPointLat,
-          endPointLong
+          endPointLong,
         }
       );
       console.log(response.data); // Log the response from the server
@@ -210,7 +223,7 @@ const Addlocationdetails = () => {
       alert("Failed to add collecting detail");
     }
   };
-  
+
   return (
     <Box component="form" onSubmit={handleSubmit} noValidate>
       <Grid container spacing={2}>
@@ -269,30 +282,33 @@ const Addlocationdetails = () => {
             InputLabelProps={{
               shrink: true,
             }}
+            inputProps={{
+              readOnly: true, // Make the field read-only
+            }}
             value={formData.date}
             onChange={handleChange}
           />
         </Grid>
         <Grid item xs={12}>
-           <FormControl fullWidth>
-             <InputLabel>Garbage Type</InputLabel>
-             <Select
-               multiple
-               value={formData.garbageType}
-               onChange={handleChange}
-               inputProps={{ "aria-label": "Select Garbage Type" }}
-               name="garbageType"
-             >
-               {names.map((name) => (
-                 <MenuItem key={name} value={name}>
-                   {name}
-                 </MenuItem>
-               ))}
-             </Select>
-           </FormControl>
-         </Grid>
+          <FormControl fullWidth>
+            <InputLabel>Garbage Type</InputLabel>
+            <Select
+              multiple
+              value={formData.garbageType}
+              onChange={handleChange}
+              inputProps={{ "aria-label": "Select Garbage Type" }}
+              name="garbageType"
+            >
+              {names.map((name) => (
+                <MenuItem key={name} value={name}>
+                  {name}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </Grid>
       </Grid>
-      <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }}>
+      <Button type="submit" variant="contained" sx={{ mt: 3, mb: 11 }}>
         Add
       </Button>
     </Box>

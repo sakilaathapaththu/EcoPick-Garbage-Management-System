@@ -1,5 +1,7 @@
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -11,14 +13,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import testpic from "../assets/images/profile.jpeg";
 import DeleteIcon from "@mui/icons-material/Delete";
 import TextField from "@mui/material/TextField";
 import { API_BASE_URL } from "../utils/constants";
 
-export default function Profilepage() {
+export default function ProfilePage() {
   const [user, setUser] = useState(null);
   const [profileImage, setProfileImage] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -46,6 +48,51 @@ export default function Profilepage() {
     setProfileImage(file);
   };
 
+  const handleUpdate = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const userId = JSON.parse(localStorage.getItem("user"))._id;
+      const response = await axios.put(
+        `${API_BASE_URL}/api/auth/update/profile/${userId}`,
+        user,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      setUser(response.data);
+      alert("User details updated successfully");
+    } catch (error) {
+      console.error("Error updating user:", error);
+      alert("Failed to update user details");
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/Login");
+  };
+
+  const handleDeleteAccount = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const userId = JSON.parse(localStorage.getItem("user"))._id;
+      await axios.delete(`${API_BASE_URL}/api/auth/delete/profile/${userId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      navigate("/Signup");
+    } catch (error) {
+      console.error("Error deleting account:", error);
+      alert("Failed to delete account");
+    }
+  };
+
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
     ...theme.typography.body2,
@@ -60,32 +107,32 @@ export default function Profilepage() {
           <Grid item xs={1}></Grid>
           <Grid item xs={4}>
             <Card sx={{ maxWidth: 400 }}>
-              <CardMedia
-                component="img"
-                alt="Profile Image"
-                maxWidth="100"
-                image={
-                  profileImage ? URL.createObjectURL(profileImage) : testpic
-                }
-                sx={{
-                  mt: 5,
-                  width: 150, // Adjust the width as needed
-                  height: 150, // Adjust the height as needed
-                  display: "block", // Ensure the image is treated as a block element
-                  ml: "auto",
-                  mr: "auto", // Center the image horizontally
-                  borderRadius: "50%", // Shape the image as a circle
-                  overflow: "hidden", // Hide overflow to maintain shape
-                }}
-              />
-
+              {user && user.profileImage && ( // Check if user and profileImage exist
+                <CardMedia
+                  component="img"
+                  alt="Profile Image"
+                  maxWidth="100"
+                  // Construct the URL to the image
+                  image={`${API_BASE_URL}/${user.profileImage}`} // Use the correct path to the image
+                  sx={{
+                    mt: 5,
+                    width: 150,
+                    height: 150,
+                    display: "block",
+                    ml: "auto",
+                    mr: "auto",
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                  }}
+                />
+              )}
               <CardContent>
                 {user && (
                   <Typography
                     gutterBottom
                     variant="h5"
                     component="div"
-                    sx={{ textAlign: "center" }} // Align text center horizontally
+                    sx={{ textAlign: "center" }}
                   >
                     {user.firstName} {user.lastName}
                   </Typography>
@@ -109,22 +156,17 @@ export default function Profilepage() {
                   onChange={handleImageChange}
                   style={{ display: "none" }}
                 />
-                <label htmlFor="profile-image-input">
-                  <Button variant="contained" component="span">
-                    Upload Image
-                  </Button>
-                </label>
                 <Button
                   variant="outlined"
                   startIcon={<DeleteIcon />}
                   color="error"
+                  onClick={handleDeleteAccount} // Call handleDeleteAccount function
                 >
                   Delete
                 </Button>
               </CardActions>
             </Card>
           </Grid>
-
           <Grid item xs={6}>
             {user && (
               <Item>
@@ -132,11 +174,10 @@ export default function Profilepage() {
                   gutterBottom
                   variant="h5"
                   component="div"
-                  sx={{}} // Align text center horizontally
+                  sx={{ textAlign: "center" }}
                 >
                   Welcome, {user.firstName} {user.lastName}
                 </Typography>
-
                 <TextField
                   fullWidth
                   id="firstName"
@@ -148,7 +189,6 @@ export default function Profilepage() {
                     setUser({ ...user, firstName: e.target.value })
                   }
                 />
-
                 <TextField
                   fullWidth
                   id="lastName"
@@ -160,7 +200,6 @@ export default function Profilepage() {
                     setUser({ ...user, lastName: e.target.value })
                   }
                 />
-
                 <TextField
                   fullWidth
                   id="email"
@@ -170,7 +209,6 @@ export default function Profilepage() {
                   value={user.email}
                   onChange={(e) => setUser({ ...user, email: e.target.value })}
                 />
-
                 <TextField
                   fullWidth
                   id="contactNo"
@@ -182,7 +220,6 @@ export default function Profilepage() {
                     setUser({ ...user, contactNo: e.target.value })
                   }
                 />
-
                 <TextField
                   fullWidth
                   id="address"
@@ -194,8 +231,20 @@ export default function Profilepage() {
                     setUser({ ...user, address: e.target.value })
                   }
                 />
-                <Button variant="contained" color="success">
-                  Edit
+                <Button
+                  variant="contained"
+                  color="success"
+                  onClick={handleUpdate}
+                >
+                  Update
+                </Button>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleLogout}
+                  sx={{ ml: 2 }}
+                >
+                  Logout
                 </Button>
               </Item>
             )}
@@ -203,8 +252,8 @@ export default function Profilepage() {
           <Grid item xs={1}></Grid>
         </Grid>
       </Box>
-
       <Footer />
     </div>
   );
 }
+

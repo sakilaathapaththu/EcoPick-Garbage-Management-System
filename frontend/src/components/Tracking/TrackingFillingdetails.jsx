@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
-
+import Grid from "@mui/material/Grid";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
@@ -74,9 +74,21 @@ export default function TrackingFillingdetails() {
             {
               ...prevOptions.data[0],
               dataPoints: [
-                { y: response.data.filledCapacity, label: "Filled Capacity", color: "red" },
-                { y: response.data.emptyCapacity, label: "Empty Capacity", color: "green" },
-                { y: response.data.totalCapacity, label: "Total Capacity", color: "blue" },
+                {
+                  y: response.data.filledCapacity,
+                  label: "Filled Capacity",
+                  color: "red",
+                },
+                {
+                  y: response.data.emptyCapacity,
+                  label: "Empty Capacity",
+                  color: "green",
+                },
+                {
+                  y: response.data.totalCapacity,
+                  label: "Total Capacity",
+                  color: "blue",
+                },
               ],
             },
           ],
@@ -94,17 +106,35 @@ export default function TrackingFillingdetails() {
 
   return (
     <Card sx={{ maxWidth: 450 }}>
-      <CardHeader sx={{ textAlign: "center" }} title="Garbage Filling Details" />
       <CardContent>
         {details ? (
           <React.Fragment>
-            <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
-              Total Capacity: {details.totalCapacity}
-            </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
-              Filled Capacity: {details.filledCapacity}
-            </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ paddingBottom: 2 }}
+                >
+                  Total Capacity: {details.totalCapacity}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ paddingBottom: 2 }}
+                >
+                  Filled Capacity: {details.filledCapacity}
+                </Typography>
+              </Grid>
+            </Grid>
+
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ paddingBottom: 2 }}
+            >
               Empty Capacity: {details.emptyCapacity}
             </Typography>
           </React.Fragment>

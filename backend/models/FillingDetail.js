@@ -13,6 +13,10 @@ const fillingDetailSchema = new mongoose.Schema({
     emptyCapacity: {
         type: Number,
         required: true
+    },
+    date: {
+        type: String,
+        required: true
     }
 });
 

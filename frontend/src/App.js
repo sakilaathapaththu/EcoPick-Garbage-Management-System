@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Trackingpage from "./pages/Trackingpage";
 import Addcollectingdata from './pages/Addcollectingdata';
+import Viewfillingrecode from "./pages/Viewfillingrecode";
 import Profilepage from "./pages/Profilepage";
 
 
@@ -46,6 +47,8 @@ function AppRouter() {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Tracking" element={<Trackingpage />} />
         <Route path="/Addcollectingdata" element={<Addcollectingdata/>} />
+        <Route path="/Viewfillingrecode" element={<Viewfillingrecode/>} />
+        
         <Route path="/Profile" element={<Profilepage/>} />
         
        
