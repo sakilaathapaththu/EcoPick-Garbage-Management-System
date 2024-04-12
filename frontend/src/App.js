@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from "./pages/Loginpage";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/About" element={<About/>} />
+        <Route path="/Contact" element={<Contact/>} />
         {/* Set default route to the Login page */}
         <Route path="/" element={<Login />} />
       </Routes>

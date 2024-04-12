@@ -1,17 +1,8 @@
-2024-03-19 14:29:23,485 - INFO - Flask server started
-2024-03-19 14:29:23,489 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-04-09 13:46:42,180 - INFO - Flask server started
+2024-04-09 13:46:42,183 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2024-03-19 14:29:23,489 - INFO - [33mPress CTRL+C to quit[0m
-2024-03-19 14:29:25,566 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-03-19 14:29:25,569 - INFO - 127.0.0.1 - - [19/Mar/2024 14:29:25] "GET / HTTP/1.1" 200 -
-2024-03-19 14:29:25,583 - INFO - 127.0.0.1 - - [19/Mar/2024 14:29:25] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-03-19 14:29:25,588 - INFO - 127.0.0.1 - - [19/Mar/2024 14:29:25] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-03-19 14:29:56,577 - INFO - Preprocessed Text : 0    thank good nice
-Name: tweet, dtype: object
-2024-03-19 14:29:56,577 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
-2024-03-19 14:29:56,578 - INFO -  Prediction : negative
-2024-03-19 14:29:56,579 - INFO - 127.0.0.1 - - [19/Mar/2024 14:29:56] "[32mPOST / HTTP/1.1[0m" 302 -
-2024-03-19 14:29:56,588 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-03-19 14:29:56,588 - INFO - 127.0.0.1 - - [19/Mar/2024 14:29:56] "GET / HTTP/1.1" 200 -
-2024-03-19 14:29:56,596 - INFO - 127.0.0.1 - - [19/Mar/2024 14:29:56] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-03-19 14:29:56,600 - INFO - 127.0.0.1 - - [19/Mar/2024 14:29:56] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-04-09 13:46:42,183 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-09 13:46:44,533 - INFO - ============== OPEN FEEDBACK PAGE =================
+2024-04-09 13:46:44,535 - INFO - 127.0.0.1 - - [09/Apr/2024 13:46:44] "GET / HTTP/1.1" 200 -
+2024-04-09 13:46:44,558 - INFO - 127.0.0.1 - - [09/Apr/2024 13:46:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-04-09 13:46:44,571 - INFO - 127.0.0.1 - - [09/Apr/2024 13:46:44] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -

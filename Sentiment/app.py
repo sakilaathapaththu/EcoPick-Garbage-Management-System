@@ -1,8 +1,13 @@
 from flask import Flask, jsonify, render_template, request, redirect
 from prediction_pipeline import preprocessing, vectorizer, get_prediction
 from logger import logging
+from flask_pymongo import PyMongo
+from flask_cors import CORS
 
 app = Flask(__name__)
+app.config["MONGO_URI"] = "mongodb+srv://sakila:sakila@client.cvrtm65.mongodb.net/?retryWrites=true&w=majority&appName=client"
+db = PyMongo(app).db
+CORS(app)
 
 logging.info('Flask server started')
 
@@ -19,13 +24,18 @@ def index():
 
     logging.info('============== OPEN FEEDBACK PAGE =================')
 
+    # Dummy Positive Feedback Messages : 
+    # 1. Excellent job cleaning! Streets look great
+    # 2. The garbage collectors did an excellent job cleaning up our area. The streets are spotless
 
     return render_template('index.html', data = data)
 
 @app.route("/", methods = ['POST'])
 def my_post():
-    text = request.form['text']
-
+    text = request.form["text"]
+    name = request.form["name"]
+    email = request.form["email"]
+    db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
     print('Text : {text}')
 
 
