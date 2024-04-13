@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import { PieChart } from "@mui/x-charts/PieChart";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -13,13 +13,10 @@ import Collapse from "@mui/material/Collapse";
 
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-
+import Grid from "@mui/material/Grid";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import TrackingFillingdetails from "./TrackingFillingdetails";
 import { API_BASE_URL } from "../../utils/constants";
-
-
-
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -58,7 +55,6 @@ export default function TrackingCardview() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  
 
   return (
     <Card sx={{ maxWidth: 450 }}>
@@ -69,46 +65,54 @@ export default function TrackingCardview() {
       />
 
       <CardContent>
-      {details ? (
-        <React.Fragment>
-          <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
-            Start Point: {details.startPoint}
+        {details ? (
+          <React.Fragment>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ paddingBottom: 2 }}
+                >
+                  Start Point: {details.startPoint}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ paddingBottom: 2 }}
+                >
+                  End Point: {details.endPoint}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ paddingBottom: 2 }}
+                >
+                  Date: {details.date}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ paddingBottom: 2 }}
+                >
+                  Type: {details.garbageType.join(", ")}
+                </Typography>
+              </Grid>
+            </Grid>
+          </React.Fragment>
+        ) : (
+          <Typography variant="body2" color="text.secondary">
+            Loading...
           </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
-            End Point: {details.endPoint}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
-            Date: {details.date}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ paddingBottom: 2 }}>
-            Type: {details.garbageType.join(", ")}
-          </Typography>
-          
-        </React.Fragment>
-      ) : (
-        <Typography variant="body2" color="text.secondary">
-          Loading...
-        </Typography>
-      )}
-    </CardContent>
-      
-      <CardActions disableSpacing>
-      <Button size="small" onClick={handleExpandClick}>View More Details</Button>
-
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-        <TrackingFillingdetails/>
-        </CardContent>
-      </Collapse>
+        )}
+      </CardContent>
+      <TrackingFillingdetails />
     </Card>
   );
 }

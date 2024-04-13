@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-
+const path = require("path");
 
 
 
@@ -20,6 +20,8 @@ app.use(morgan("tiny"));
 app.use(bodyParser.json());
 app.use('/images', express.static('images'));
 
+// Serve uploaded images statically
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // mongodb connection
 const con = require("./database/connection.js");
 
@@ -34,6 +36,9 @@ const collectingdetailRoutes = require("./routes/collectingdetailRoute.js");
 app.use("/Api/Addcollectingdata", collectingdetailRoutes);
 const fillingdetailRoutes = require("./routes/fillingdetailRoute.js");
 app.use("/Api/Fillingdetails", fillingdetailRoutes);
+
+const getallfillingdetailsRoutes = require("./routes/getallfillingdetailsRoute.js");
+app.use("/Api/GetallfillingdetailsRoutes", getallfillingdetailsRoutes);
 
 // const employeeRouter = require("./Routes/employees");
 // app.use("/employees", employeeRouter);
