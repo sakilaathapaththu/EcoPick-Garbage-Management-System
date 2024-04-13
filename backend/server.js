@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-
+const path = require("path");
 
 
 
@@ -9,14 +9,43 @@ const app = express();
 
 require("dotenv").config({ path: "./config.env" });
 const port = process.env.PORT || 5000;
+const bodyParser = require("body-parser");
+
 
 // use middleware
 app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny"));
 
+app.use(bodyParser.json());
+app.use('/images', express.static('images'));
+
+// Serve uploaded images statically
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // mongodb connection
 const con = require("./database/connection.js");
+
+//User Routers
+const userRoutes = require("./routes/Users.js");
+app.use("/api/users",userRoutes);
+const authRoutes = require("./routes/auth.js");
+app.use("/api/auth",authRoutes);
+const locationRoutes = require('./routes/locationRoutes.js');
+app.use('/api', locationRoutes);
+const collectingdetailRoutes = require("./routes/collectingdetailRoute.js");
+app.use("/Api/Addcollectingdata", collectingdetailRoutes);
+const fillingdetailRoutes = require("./routes/fillingdetailRoute.js");
+app.use("/Api/Fillingdetails", fillingdetailRoutes);
+
+const getallfillingdetailsRoutes = require("./routes/getallfillingdetailsRoute.js");
+app.use("/Api/GetallfillingdetailsRoutes", getallfillingdetailsRoutes);
+
+// const employeeRouter = require("./Routes/employees");
+// app.use("/employees", employeeRouter);
+
+
+
+
 
 
 
