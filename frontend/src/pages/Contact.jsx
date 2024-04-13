@@ -1,7 +1,7 @@
 import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {contactConfig} from "../pages/content_option";
-import contbanner from "../assets/images/contbanner.png"
+import contbanner from "../assets/images/contbanner.png";
 
 export default function ContactUs() {
     return (
