@@ -59,18 +59,6 @@ export default function About () {
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className="col-sm-6 col-md-4">
-                        <div className="team-item">
-
-                            <img src="https://media.licdn.com/dms/image/C4D03AQF2FHsso0BxZw/profile-displayphoto-shrink_800_800/0/1656914820130?e=2147483647&v=beta&t=a1aKhqgxuTtF-9M-q3jhxa4mEfT3ZERlJOQvB7wmFcA" className="team-img" alt="pic"/>
-                            <h4> JOHNATHAN HAWKINS</h4>
-                            <div className="team-info">
-                                <p>Head of SEO</p>
-                                <p>loran ipsulem</p>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
 
 

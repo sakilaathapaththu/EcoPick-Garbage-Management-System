@@ -70,39 +70,3 @@ export default function ContactUs() {
         </section>
     );
 };
-
-
-
-
-
-
-
-
-// import {useRef} from 'react'
-
-// const Contact = () => {
-//     const form = useRef();
-
-//     const sendEmail = () => {};
-//   return (
-//     <section>
-//         <div className='contact-container'>
-//         <h2 className='contact-center'>Contact Us</h2>
-//             <form ref = {form} onSubmit={sendEmail}
-//              className='form-control-card'>
-//                 {/* <div className="team-contact">
-                
-//                     <img src="https://img.freepik.com/premium-vector/megaphone-contact-with-yellow-background-megaphone-banner-web-design_686498-846.jpg?w=1800" className="img-contact" alt="image is not visible"/>
-//                 </div> */}
-//                 <input type='text' placeholder='Full Name'name='user_name' required></input>
-//                 <input type='email' placeholder='Email'name='user_email' required></input>
-//                 <input type='text' placeholder='Subject'name='subject' required></input>
-//                 <textarea name="message" cols="30" rows="10"></textarea>
-//                 <button type='submit' className='--btn-primary'>Send Message</button>
-//             </form>
-//         </div>
-//     </section>
-//   )
-// }
-
-// export default Contact
