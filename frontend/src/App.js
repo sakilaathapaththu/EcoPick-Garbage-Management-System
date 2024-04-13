@@ -41,7 +41,7 @@ function AppRouter() {
     } else {
       return <Navbar /> ;
     }
-
+  }
   return (
     <>
       {renderNavbar()}

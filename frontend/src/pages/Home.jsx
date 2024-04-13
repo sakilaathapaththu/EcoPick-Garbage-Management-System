@@ -47,7 +47,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={2} sm={3} md={3}>
             <Item>
-              <CardComponent images={feedbackpic} title={title02} />
+              <CardComponent images={feedbackpic} title={title02} url={'http://127.0.0.1:5000/'} />
             </Item>
           </Grid>
           <Grid item xs={2} sm={3} md={3}>
@@ -57,7 +57,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={2} sm={3} md={3}>
             <Item>
-              <CardComponent images={contactuspic} title={title04} />
+              <CardComponent images={contactuspic} title={title04} url={'/Contact'} />
             </Item>
           </Grid>
         </Grid>
