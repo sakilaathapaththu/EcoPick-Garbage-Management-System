@@ -54,9 +54,10 @@ function AppRouter() {
         <Route path="/Addcollectingdata" element={<Addcollectingdata/>} />
         <Route path="/Viewfillingrecode" element={<Viewfillingrecode/>} />
 
+
         {/* <Route path="/About" element={<About/>} /> */}
         <Route path="/Contact" element={<Contact/>} />
-       
+      
         <Route path="/Profile" element={<Profilepage/>} />
        
        
