@@ -1,5 +1,7 @@
 import React from "react";
+
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+
 import Navbar from "./components/NavBar/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Loginpage";
@@ -9,10 +11,11 @@ import Trackingpage from "./pages/Trackingpage";
 import Addcollectingdata from './pages/Addcollectingdata';
 import Viewfillingrecode from "./pages/Viewfillingrecode";
 import Profilepage from "./pages/Profilepage";
+
 // import About from "./pages/About";
 import Contact from "./pages/Contact";
  
- 
+
 function App() {
   return (
     <BrowserRouter>
@@ -20,16 +23,17 @@ function App() {
     </BrowserRouter>
   );
 }
- 
+
 function AppRouter() {
   // Custom hook to get the current location
   const location = useLocation();
   // Array of paths where Navbar should be hidden
   const hiddenPaths = ["/Login", "/Dashboard","/","/Addcollectingdata","/Viewfillingrecode"];
+
  
   // Function to check if the current path is in hiddenPaths
   const isHiddenPath = path => hiddenPaths.includes(path);
- 
+
   // Conditionally render Navbar based on the current route
   const renderNavbar = () => {
     if (isHiddenPath(location.pathname)) {
@@ -37,8 +41,7 @@ function AppRouter() {
     } else {
       return <Navbar /> ;
     }
-  };
- 
+
   return (
     <>
       {renderNavbar()}
@@ -50,6 +53,7 @@ function AppRouter() {
         <Route path="/Tracking" element={<Trackingpage />} />
         <Route path="/Addcollectingdata" element={<Addcollectingdata/>} />
         <Route path="/Viewfillingrecode" element={<Viewfillingrecode/>} />
+
         {/* <Route path="/About" element={<About/>} /> */}
         <Route path="/Contact" element={<Contact/>} />
        
@@ -62,6 +66,7 @@ function AppRouter() {
       </Routes>
  
      
+
     </>
   );
 }
