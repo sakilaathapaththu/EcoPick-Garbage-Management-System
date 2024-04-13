@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>App</title>
+    
+</head>
+<body>
+<div class="split left">
+    <div class="centered">
+        <!-- <h2> Feedback </h2>
+        <h6>Give your valuable Feedback for our service.</h6> -->
+        <img src="../static/products/feedback.jpg" alt="" style="width: 400%; max-width: 600px;">
+    </div>
+</div>
+
+<div class="split right">
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="text-center mb-3">
+                    <h2>Share Your Thoughts</h2>
+                </div>
+                <form method="post">
+                    <h6 class="text-center mb-3">Your feedback fuels our growth! Share your experience with us.</h6>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" name="city" id="city" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telephone" class="form-label">Contact Number</label>
+                        <input type="text" name="telephone" id="telephone" class="form-control" placeholder="10-digit phone number" pattern="[0-9]{10}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="feedback" class="form-label">Your Feedback</label>
+                        <textarea name="text" id="feedback" class="form-control" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                    <br>
+                    <div class="d-flex justify-content-between mt-3">
+                        <label for="">Positive Feedback: {{ data.positive }}</label>
+                        <label for="">Negative Feedback: {{ data.negative }}</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <script>
+    function validateForm() {
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var address = document.getElementById('city').value.trim();
+        var telephone = document.getElementById('telephone').value.trim();
+
+  if (name === "" || email === "" || address === "" || telephone === "") {
+    alert("Please fill in all fields.");
+    return false;
+  }
+
+  if (!validateEmail(email)) {
+    return false; // prevent submission if email is invalid
+  }
+
+  // if (!validateCity(address)) {
+  //   alert("Invalid city format");
+  //   return false;
+  // }
+
+   if (!validateTelephone(telephone)) {
+     alert("Invalid phone number format");
+     return false;
+   }
+
+  return true;
+}
+</script> -->
+
+<script>
+    function validateForm() {
+
+    //     var name = document.getElementById('name').value.trim();
+    //     var email = document.getElementById('email').value.trim();
+    //     var address = document.getElementById('city').value.trim();
+    //     var telephone = document.getElementById('telephone').value.trim();
+
+    // if (name === "" || email === "" || address === "" || telephone === "") {
+    // alert("Please fill in all fields.");
+    // return false;
+    // }
+
+      const email = document.getElementById('email').value;
+      const emailRegex = /^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}$/; // Regular expression for email format
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+      
+      return true;
+    }
+
+// function submitFeedback(event) {
+//   event.preventDefault(); // Prevent default submission
+
+//   const feedbackText = document.getElementById('feedback').value;
+
+//   // Perform sentiment analysis using your chosen library
+//   // (code for sentiment analysis using the library)
+
+//   const sentiment = sentimentScore; // Replace with actual sentiment
+
+//   let thankYouMessage;
+//   if (sentiment === 'positive') {
+//     thankYouMessage = 'Thank you for your positive feedback!';
+//   } else if (sentiment === 'negative') {
+//     thankYouMessage = 'Thank you for your feedback. We apologize for any inconvenience and will work to improve.';
+//   } else {
+//     thankYouMessage = 'Thank you for your feedback!';
+//   }
+
+//   alert(thankYouMessage);
+// }
+
+    </script>
+    
+    <form method="post" onsubmit="return validateForm()">
+      </form>
+    </body>
+</html>

@@ -1,0 +1,124 @@
+*{
+    font-family: sans-serif;
+}
+
+/* Rest of your CSS styles... */
+
+/* Set the background image for the entire body */
+body {
+  font-family: sans-serif;
+  /* background-image: url('https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80');  */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Rest of your CSS styles... */
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+  
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+  
+.centered img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.comments {
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+}
+
+/* Style the form container */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style form labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style form input and textarea */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the submit button on hover */
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+.comment-bottom {
+  background-color: #f9f9f9; /* Change to your desired background color */
+  padding: 20px; /* Adjust padding as needed */
+  margin: 10px 0; /* Adjust margins as needed */
+  border: 1px solid #ccc; /* Add borders if desired */
+  border-radius: 5px; /* Add border radius if desired */
+}
+
+
+
+/* Additional styles for text, hr, or other elements within the section can be added here. */
+
+
+
+
