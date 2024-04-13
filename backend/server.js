@@ -37,7 +37,8 @@ app.use("/Api/Addcollectingdata", collectingdetailRoutes);
 const fillingdetailRoutes = require("./routes/fillingdetailRoute.js");
 app.use("/Api/Fillingdetails", fillingdetailRoutes);
 
-
+const getallfillingdetailsRoutes = require("./routes/getallfillingdetailsRoute.js");
+app.use("/Api/GetallfillingdetailsRoutes", getallfillingdetailsRoutes);
 
 // const employeeRouter = require("./Routes/employees");
 // app.use("/employees", employeeRouter);

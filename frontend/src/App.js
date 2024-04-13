@@ -23,7 +23,7 @@ function AppRouter() {
   // Custom hook to get the current location
   const location = useLocation();
   // Array of paths where Navbar should be hidden
-  const hiddenPaths = ["/Login", "/Dashboard","/"];
+  const hiddenPaths = ["/Login", "/Dashboard","/","/Addcollectingdata","/Viewfillingrecode"];
 
   // Function to check if the current path is in hiddenPaths
   const isHiddenPath = path => hiddenPaths.includes(path);
