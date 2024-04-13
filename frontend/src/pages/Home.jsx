@@ -19,6 +19,7 @@ const title02 = "Add Feedback ";
 const title03 = "About Us ";
 const title04 = "Contact Us ";
 
+const description01= "TrackingView enables users to monitor live garbage collection vehicle locations, available filling space, and scheduled routes for efficient waste management";
 const Item = styled(Box)(({ theme }) => ({
   transition: "transform 0.5s ease", // Define the transition effect for transform
   "&:hover": {
@@ -29,7 +30,7 @@ const Item = styled(Box)(({ theme }) => ({
 export default function Home() {
   return (
     <div>
-    <Box sx={{ flexGrow: 1, mt: "4%", ml: 1, mr: 1 }}>
+    <Box sx={{ flexGrow: 1, mt: "6%", ml: 1, mr: 1 }}>
       <Box>
         <Corousel />
       </Box>
@@ -41,7 +42,7 @@ export default function Home() {
         >
           <Grid item xs={2} sm={3} md={3}>
             <Item>
-              <CardComponent images={slide01} title={title01} url={'/Tracking'} />
+              <CardComponent images={slide01} title={title01} url={'/Tracking'} description={description01} />
             </Item>
           </Grid>
           <Grid item xs={2} sm={3} md={3}>

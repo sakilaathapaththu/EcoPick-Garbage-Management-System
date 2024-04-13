@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Trackingpage from "./pages/Trackingpage";
 import Addcollectingdata from './pages/Addcollectingdata';
+import Viewfillingrecode from "./pages/Viewfillingrecode";
 import Profilepage from "./pages/Profilepage";
 
 
@@ -22,7 +23,7 @@ function AppRouter() {
   // Custom hook to get the current location
   const location = useLocation();
   // Array of paths where Navbar should be hidden
-  const hiddenPaths = ["/Login", "/Dashboard","/"];
+  const hiddenPaths = ["/Login", "/Dashboard","/","/Addcollectingdata","/Viewfillingrecode"];
 
   // Function to check if the current path is in hiddenPaths
   const isHiddenPath = path => hiddenPaths.includes(path);
@@ -46,6 +47,8 @@ function AppRouter() {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Tracking" element={<Trackingpage />} />
         <Route path="/Addcollectingdata" element={<Addcollectingdata/>} />
+        <Route path="/Viewfillingrecode" element={<Viewfillingrecode/>} />
+        
         <Route path="/Profile" element={<Profilepage/>} />
         
        

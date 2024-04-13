@@ -71,10 +71,10 @@ const Footer = () => {
           <Grid item xs={12} lg={8} container spacing={4}>
             {/* Section 1 */}
             <Grid item xs={12} md={6} lg={3} component={SectionContainer}>
-              <Typography variant="h6" gutterBottom>
+              {/* <Typography variant="h6" gutterBottom>
                 <b> Participate</b>
-              </Typography>
-              <ul>
+              </Typography> */}
+              {/* <ul>
                 <li>
                   {" "}
                   <a
@@ -93,16 +93,16 @@ const Footer = () => {
                     Public Consultation
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </Grid>
 
             {/* Section 2 */}
             <Grid item xs={12} md={6} lg={3} component={SectionContainer}>
-              <Typography variant="h6" gutterBottom>
+              {/* <Typography variant="h6" gutterBottom>
                 <b> About Us</b>
               </Typography>
-              <ul>
-                <li>
+              <ul> */}
+                {/* <li>
                   <a
                     href="/aboutus"
                     style={{ color: "white", textDecoration: "none" }}
@@ -117,8 +117,8 @@ const Footer = () => {
                   >
                     General Feedback
                   </a>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <a
                     href="/contact-us"
                     style={{ color: "white", textDecoration: "none" }}
@@ -134,12 +134,12 @@ const Footer = () => {
                     SiteMap
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </Grid>
 
             {/* Section 3 */}
             <Grid item xs={12} md={6} lg={3} component={SectionContainer}>
-              <Typography variant="h6" gutterBottom>
+              {/* <Typography variant="h6" gutterBottom>
                 <b> User Policies</b>
               </Typography>
               <ul>
@@ -161,12 +161,12 @@ const Footer = () => {
                     Terms of Participation
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </Grid>
 
             {/* Section 4 */}
             <Grid item xs={12} md={6} lg={3} component={SectionContainer}>
-              <Typography variant="h6" gutterBottom>
+              {/* <Typography variant="h6" gutterBottom>
                 <b> For Media</b>
               </Typography>
               <ul>
@@ -179,7 +179,7 @@ const Footer = () => {
                     News & Press Releases
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </Grid>
           </Grid>
         </Grid>

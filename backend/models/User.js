@@ -32,7 +32,10 @@ const userSchema = new mongoose.Schema({
     registrationDate: {
         type: Date,
         default: Date.now
-    }
+    },
+    profileImage: {
+      type: String, // Assuming profile image URL will be stored as a string
+    },
 });
 
 //Generate web token for user
