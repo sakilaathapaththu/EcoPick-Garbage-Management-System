@@ -1,8 +1,22 @@
-2024-04-09 13:46:42,180 - INFO - Flask server started
-2024-04-09 13:46:42,183 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-04-14 13:51:21,980 - INFO - Flask server started
+2024-04-14 13:51:21,984 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2024-04-09 13:46:42,183 - INFO - [33mPress CTRL+C to quit[0m
-2024-04-09 13:46:44,533 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-09 13:46:44,535 - INFO - 127.0.0.1 - - [09/Apr/2024 13:46:44] "GET / HTTP/1.1" 200 -
-2024-04-09 13:46:44,558 - INFO - 127.0.0.1 - - [09/Apr/2024 13:46:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-09 13:46:44,571 - INFO - 127.0.0.1 - - [09/Apr/2024 13:46:44] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-04-14 13:51:21,984 - INFO - [33mPress CTRL+C to quit[0m
+2024-04-14 13:51:26,840 - INFO - Preprocessed Text : 0    good good nice best
+Name: tweet, dtype: object
+2024-04-14 13:51:26,841 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-04-14 13:51:26,842 - INFO -  Prediction : positive
+2024-04-14 13:51:26,842 - INFO - 127.0.0.1 - - [14/Apr/2024 13:51:26] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-04-14 13:51:27,905 - INFO - ============== OPEN HOME PAGE =================
+2024-04-14 13:51:27,917 - INFO - 127.0.0.1 - - [14/Apr/2024 13:51:27] "GET / HTTP/1.1" 200 -
+2024-04-14 13:51:27,954 - INFO - 127.0.0.1 - - [14/Apr/2024 13:51:27] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-04-14 13:51:27,959 - INFO - 127.0.0.1 - - [14/Apr/2024 13:51:27] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-04-14 13:51:52,389 - INFO - Preprocessed Text : 0    good best nice
+Name: tweet, dtype: object
+2024-04-14 13:51:52,391 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-04-14 13:51:52,393 - INFO -  Prediction : positive
+2024-04-14 13:51:52,394 - INFO - 127.0.0.1 - - [14/Apr/2024 13:51:52] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-04-14 13:51:52,402 - INFO - ============== OPEN HOME PAGE =================
+2024-04-14 13:51:52,403 - INFO - 127.0.0.1 - - [14/Apr/2024 13:51:52] "GET / HTTP/1.1" 200 -
+2024-04-14 13:51:52,418 - INFO - 127.0.0.1 - - [14/Apr/2024 13:51:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-04-14 13:51:52,422 - INFO - 127.0.0.1 - - [14/Apr/2024 13:51:52] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
