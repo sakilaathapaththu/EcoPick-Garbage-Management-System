@@ -5,13 +5,16 @@
   "dependencies": {
     "@canvasjs/react-charts": "^1.0.2",
     "@emotion/react": "^11.11.4",
-
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/x-charts": "^7.2.0",
     "@react-google-maps/api": "^2.19.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-
     "axios": "^1.6.8",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-lottie": "^1.2.4",

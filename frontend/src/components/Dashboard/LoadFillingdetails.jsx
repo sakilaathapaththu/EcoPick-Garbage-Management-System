@@ -1,259 +1,272 @@
-// import * as React from 'react';
-// import Paper from '@mui/material/Paper';
-// import Table from '@mui/material/Table';
-// import TableBody from '@mui/material/TableBody';
-// import TableCell from '@mui/material/TableCell';
-// import TableContainer from '@mui/material/TableContainer';
-// import TableHead from '@mui/material/TableHead';
-// import TablePagination from '@mui/material/TablePagination';
-// import TableRow from '@mui/material/TableRow';
-
-
-// const columns = [
-//     { id: 'name', label: 'Name', minWidth: 170 },
-//     { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
-//     {
-//       id: 'population',
-//       label: 'Population',
-//       minWidth: 170,
-//       align: 'right',
-//       format: (value) => value.toLocaleString('en-US'),
-//     },
-//     {
-//       id: 'size',
-//       label: 'Size\u00a0(km\u00b2)',
-//       minWidth: 170,
-//       align: 'right',
-//       format: (value) => value.toLocaleString('en-US'),
-//     },
-//     {
-//       id: 'density',
-//       label: 'Density',
-//       minWidth: 170,
-//       align: 'right',
-//       format: (value) => value.toFixed(2),
-//     },
-//   ];
-  
-//   function createData(name, code, population, size) {
-//     const density = population / size;
-//     return { name, code, population, size, density };
-//   }
-  
-//   const rows = [
-//     createData('India', 'IN', 1324171354, 3287263),
-//     createData('China', 'CN', 1403500365, 9596961),
-//     createData('Italy', 'IT', 60483973, 301340),
-//     createData('United States', 'US', 327167434, 9833520),
-//     createData('Canada', 'CA', 37602103, 9984670),
-//     createData('Australia', 'AU', 25475400, 7692024),
-//     createData('Germany', 'DE', 83019200, 357578),
-//     createData('Ireland', 'IE', 4857000, 70273),
-//     createData('Mexico', 'MX', 126577691, 1972550),
-//     createData('Japan', 'JP', 126317000, 377973),
-//     createData('France', 'FR', 67022000, 640679),
-//     createData('United Kingdom', 'GB', 67545757, 242495),
-//     createData('Russia', 'RU', 146793744, 17098246),
-//     createData('Nigeria', 'NG', 200962417, 923768),
-//     createData('Brazil', 'BR', 210147125, 8515767),
-//   ];
-// export default function LoadFillingdetails() {
-//     const [page, setPage] = React.useState(0);
-//     const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  
-//     const handleChangePage = (event, newPage) => {
-//       setPage(newPage);
-//     };
-  
-//     const handleChangeRowsPerPage = (event) => {
-//       setRowsPerPage(+event.target.value);
-//       setPage(0);
-//     };
-  
-//     return (
-//       <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-//         <TableContainer sx={{ maxHeight: 440 }}>
-//           <Table stickyHeader aria-label="sticky table">
-//             <TableHead>
-//               <TableRow>
-//                 {columns.map((column) => (
-//                   <TableCell
-//                     key={column.id}
-//                     align={column.align}
-//                     style={{ minWidth: column.minWidth }}
-//                   >
-//                     {column.label}
-//                   </TableCell>
-//                 ))}
-//               </TableRow>
-//             </TableHead>
-//             <TableBody>
-//               {rows
-//                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-//                 .map((row) => {
-//                   return (
-//                     <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-//                       {columns.map((column) => {
-//                         const value = row[column.id];
-//                         return (
-//                           <TableCell key={column.id} align={column.align}>
-//                             {column.format && typeof value === 'number'
-//                               ? column.format(value)
-//                               : value}
-//                           </TableCell>
-//                         );
-//                       })}
-//                     </TableRow>
-//                   );
-//                 })}
-//             </TableBody>
-//           </Table>
-//         </TableContainer>
-//         <TablePagination
-//           rowsPerPageOptions={[10, 25, 100]}
-//           component="div"
-//           count={rows.length}
-//           rowsPerPage={rowsPerPage}
-//           page={page}
-//           onPageChange={handleChangePage}
-//           onRowsPerPageChange={handleChangeRowsPerPage}
-//         />
-//       </Paper>
-//     );
-//   }
-// `${API_BASE_URL}/Api/GetallfillingdetailsRoutes/fillingdetails`
-import * as React from 'react';
-import Paper from '@mui/material/Paper';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TablePagination from '@mui/material/TablePagination';
-import TableRow from '@mui/material/TableRow';
-import axios from 'axios'; // Import Axios for HTTP requests
+import React, { useState, useEffect } from "react";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TablePagination from "@mui/material/TablePagination";
+import TableRow from "@mui/material/TableRow";
+import axios from "axios";
 import { API_BASE_URL } from "../../utils/constants";
+import SearchIcon from '@mui/icons-material/Search';
+import { styled, alpha } from '@mui/material/styles';
+import InputBase from '@mui/material/InputBase';
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import { jsPDF } from "jspdf";
+import "jspdf-autotable";
 
-// Define table columns with updated headings
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: 'auto',
+  },
+}));
+
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  width: '100%',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    [theme.breakpoints.up('sm')]: {
+      width: '12ch',
+      '&:focus': {
+        width: '20ch',
+      },
+    },
+  },
+}));
+
 const columns = [
-    { id: 'date', label: 'Date', minWidth: 170 },
-    { id: 'garbageType', label: 'Garbage Type', minWidth: 170 },
-    {
-      id: 'filledCapacity',
-      label: 'Filled Capacity',
-      minWidth: 170,
-      align: 'right',
-      format: (value) => value.toLocaleString('en-US'),
-    },
-    {
-      id: 'emptyCapacity',
-      label: 'Empty Capacity',
-      minWidth: 170,
-      align: 'right',
-      format: (value) => value.toLocaleString('en-US'),
-    },
+  { id: "date", label: "Date", minWidth: 170 },
+  { id: "garbageType", label: "Garbage Type", minWidth: 170 },
+  {
+    id: "totalCapacity",
+    label: "Total Capacity",
+    minWidth: 170,
+    align: "right",
+  },
+  {
+    id: "emptyCapacity",
+    label: "Empty Capacity",
+    minWidth: 170,
+    align: "right",
+  },
+  {
+    id: "filledCapacity",
+    label: "Filled Capacity",
+    minWidth: 170,
+    align: "right",
+  },
 ];
 
 export default function LoadFillingdetails() {
-    const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
-    const [rows, setRows] = React.useState([]);
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [fillingDetails, setFillingDetails] = useState([]);
+  const [collectingDetails, setCollectingDetails] = useState([]);
+  const [searchDate, setSearchDate] = useState('');
+  const [filteredRecords, setFilteredRecords] = useState([]);
 
-    // Fetch data from API when component mounts
-    React.useEffect(() => {
-        // Fetch collecting details from the API
-        axios.get(`${API_BASE_URL}/Api/GetallfillingdetailsRoutes/collectingdetails`)
-        
-            .then(response => {
-                const collectingDetails = response.data;
-
-                // Use collecting details to query filling details
-                axios.get(`/api/fillingdetails?dates=${collectingDetails.map(detail => detail.date).join(',')}`)
-                
-                    .then(response => {
-                        const fillingDetails = response.data;
-
-                        // Combine collecting details with corresponding filling details
-                        const combinedData = collectingDetails.map(collectingDetail => {
-                            const correspondingFillingDetail = fillingDetails.find(detail => detail.date === collectingDetail.date);
-                            return {
-                                ...collectingDetail,
-                                filledCapacity: correspondingFillingDetail.filledCapacity,
-                                emptyCapacity: correspondingFillingDetail.emptyCapacity
-                            };
-                        });
-
-                        // Update state with combined data
-                        setRows(combinedData);
-                    })
-                    .catch(error => {
-                        console.error('Error fetching filling details:', error);
-                    });
-            })
-            .catch(error => {
-                console.error('Error fetching collecting details:', error);
-            });
-    }, []);
-
-    // Handle page change
-    const handleChangePage = (event, newPage) => {
-      setPage(newPage);
+  useEffect(() => {
+    const fetchFillingDetails = async () => {
+      try {
+        const response = await axios.get(
+          `${API_BASE_URL}/Api/GetallfillingdetailsRoutes/alldetails`
+        );
+        const { fillingDetails } = response.data;
+        setFillingDetails(fillingDetails);
+      } catch (error) {
+        console.error("Error fetching filling details:", error);
+      }
     };
-  
-    // Handle rows per page change
-    const handleChangeRowsPerPage = (event) => {
-      setRowsPerPage(+event.target.value);
-      setPage(0);
+
+    const fetchCollectingDetails = async () => {
+      try {
+        const response = await axios.get(
+          `${API_BASE_URL}/Api/GetallcollectingdetailsRoutes/alldetails/collecting`
+        );
+        const { collectingDetails } = response.data;
+        setCollectingDetails(collectingDetails);
+      } catch (error) {
+        console.error("Error fetching collecting details:", error);
+      }
     };
-  
-    return (
-      <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-        <TableContainer sx={{ maxHeight: 440 }}>
-          <Table stickyHeader aria-label="sticky table">
-            <TableHead>
-              <TableRow>
-                {columns.map((column) => (
-                  <TableCell
-                    key={column.id}
-                    align={column.align}
-                    style={{ minWidth: column.minWidth }}
-                  >
-                    {column.label}
-                  </TableCell>
-                ))}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row) => {
-                  return (
-                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+
+    fetchFillingDetails();
+    fetchCollectingDetails();
+  }, []);
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(+event.target.value);
+    setPage(0);
+  };
+
+  const handleSearchDateChange = (event) => {
+    setSearchDate(event.target.value);
+  };
+
+  const handleSearchByDate = () => {
+    const filtered = fillingDetails.filter(record => record.date === searchDate);
+    setFilteredRecords(filtered);
+  };
+
+  const handleGenerateReport = () => {
+    const doc = new jsPDF();
+    const pdfColumns = ["Date", "Garbage Type", "Total Capacity", "Empty Capacity", "Filled Capacity"];
+    const pdfRows = [];
+
+    let totalFilledCapacityForDay = 0;
+
+    (filteredRecords.length > 0 ? filteredRecords : fillingDetails).forEach((record, index) => {
+      pdfRows.push([
+        record.date,
+        record.garbageType,
+        record.totalCapacity,
+        record.emptyCapacity,
+        record.filledCapacity
+      ]);
+
+      totalFilledCapacityForDay += record.filledCapacity;
+
+      const nextRecordDate = (filteredRecords.length > 0 ? filteredRecords : fillingDetails)[index + 1]?.date;
+      const currentDate = record.date;
+
+      if (nextRecordDate !== currentDate || index === (filteredRecords.length > 0 ? filteredRecords : fillingDetails).length - 1) {
+        pdfRows.push(["Total Filled Capacity", "", "", "", totalFilledCapacityForDay]);
+        totalFilledCapacityForDay = 0;
+      }
+    });
+
+    doc.text("Garbage Filling Report", 10, 10);
+    doc.autoTable({
+      head: [pdfColumns],
+      body: pdfRows,
+      startY: 20
+    });
+
+    doc.save("garbage_filling_report.pdf");
+  };
+
+  return (
+    <Paper sx={{ width: "100%", overflow: "hidden" }}>
+      <Box sx={{
+        mt: 3,
+        mb: 2,
+        display: 'flex',
+        alignItems: 'center',
+      }}>
+        <Search>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="Search by date…"
+            inputProps={{ 'aria-label': 'search' }}
+            value={searchDate}
+            onChange={handleSearchDateChange}
+          />
+        </Search>
+        <Button variant="contained" onClick={handleSearchByDate}>Search</Button>
+      </Box>
+      <TableContainer sx={{ maxHeight: 440 }}>
+        <Table stickyHeader aria-label="sticky table">
+          <TableHead>
+            <TableRow>
+              {columns.map((column) => (
+                <TableCell
+                  key={column.id}
+                  align={column.align}
+                  style={{ minWidth: column.minWidth }}
+                >
+                  {column.label}
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {(filteredRecords.length > 0 ? filteredRecords : fillingDetails)
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((fillingRow, index) => {
+                let totalFilledCapacityForDay = 0; // Initialize total filled capacity for the day here
+
+                const matchingCollectingRow = collectingDetails.find(
+                  (collectingRow) => collectingRow.date === fillingRow.date
+                );
+
+                return (
+                  <React.Fragment key={index}>
+                    <TableRow hover role="checkbox" tabIndex={-1}>
                       {columns.map((column) => {
-                        const value = row[column.id];
-                        return (
-                          <TableCell key={column.id} align={column.align}>
-                            {column.format && typeof value === 'number'
-                              ? column.format(value)
-                              : value}
-                          </TableCell>
-                        );
+                        if (column.id === "garbageType") {
+                          const garbageType = matchingCollectingRow && matchingCollectingRow.garbageType
+                            ? matchingCollectingRow.garbageType
+                            : "";
+                          return (
+                            <TableCell key={column.id} align={column.align}>
+                              {garbageType}
+                            </TableCell>
+                          );
+                        } else {
+                          return (
+                            <TableCell key={column.id} align={column.align}>
+                              {fillingRow[column.id]}
+                            </TableCell>
+                          );
+                        }
                       })}
                     </TableRow>
-                  );
-                })}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <TablePagination
-          rowsPerPageOptions={[10, 25, 100]}
-          component="div"
-          count={rows.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
-      </Paper>
-    );
+                    {(index === (filteredRecords.length > 0 ? filteredRecords : fillingDetails).length - 1 ||
+                      fillingRow.date !== (filteredRecords.length > 0 ? filteredRecords : fillingDetails)[index + 1]?.date) && (
+                      <TableRow>
+                        <TableCell colSpan={columns.length} align="right">
+                          Total Filled Capacity: {totalFilledCapacityForDay}
+                        </TableCell>
+                      </TableRow>
+                    )}
+                  </React.Fragment>
+                );
+              })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[10, 25, 100]}
+        component="div"
+        count={(filteredRecords.length > 0 ? filteredRecords : fillingDetails).length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
+      <Box sx={{ mt: 2 }}>
+        <Button variant="contained" onClick={handleGenerateReport}>Generate Report</Button>
+      </Box>
+    </Paper>
+  );
 }

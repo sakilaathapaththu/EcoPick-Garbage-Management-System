@@ -1,33 +1,52 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { useTheme } from '@mui/material/styles';
 import { BarChart, axisClasses } from '@mui/x-charts';
-
-// import Title from './Title';
-
-function createData(time, amount) {
-    return { time, amount: amount ?? null };
-}
-
-const data = [
-    createData('00:00', 0),
-    createData('03:00', 300),
-    createData('06:00', 600),
-    createData('09:00', 800),
-    createData('12:00', 1500),
-    createData('15:00', 1000),
-    createData('18:00', 2400),
-    createData('21:00', 2400),
-    createData('24:00'),
-];
+import axios from 'axios'; // Import Axios for HTTP requests
+import { API_BASE_URL } from "../../utils/constants";
 
 export default function Chart() {
     const theme = useTheme();
+    const [chartData, setChartData] = useState([]);
+
+    useEffect(() => {
+        const fetchFillingDetails = async () => {
+            try {
+                const response = await axios.get(`${API_BASE_URL}/Api/Fillingdetails/filling-details`);
+                const fillingDetails = response.data;
+                const latestRecords = getLatestRecords(fillingDetails);
+                setChartData(latestRecords);
+            } catch (error) {
+                console.error('Error fetching filling details:', error);
+            }
+        };
+
+        fetchFillingDetails();
+    }, []);
+
+    const getLatestRecords = (fillingDetails) => {
+        const latestRecords = {};
+
+        fillingDetails.forEach(detail => {
+            const { date, totalCapacity, emptyCapacity, filledCapacity } = detail;
+            const existingRecord = latestRecords[date];
+
+            if (!existingRecord || existingRecord.date < date) {
+                latestRecords[date] = {
+                    date,
+                    filledCapacity: totalCapacity - emptyCapacity // Calculate filled capacity
+                };
+            }
+        });
+
+        return Object.values(latestRecords);
+    };
+
     return (
         <React.Fragment>
-            {/* <Title>Today</Title> */}
             <div style={{ width: '100%', flexGrow: 1, overflow: 'hidden' }}>
                 <BarChart
-                    dataset={data}
+                    dataset={chartData}
                     margin={{
                         top: 16,
                         right: 20,
@@ -36,16 +55,16 @@ export default function Chart() {
                     }}
                     xAxis={[
                         {
-                            label: 'Time(Hrs)',
+                            label: 'Date',
                             scaleType: 'band', // Set scaleType to 'band'
-                            dataKey: 'time',
+                            dataKey: 'date',
                             tickNumber: 2,
                             tickLabelStyle: theme.typography.body2,
                         },
                     ]}
                     yAxis={[
                         {
-                            label: 'Sales ($)',
+                            label: 'Filled Capacity',
                             labelStyle: {
                                 ...theme.typography.body1,
                                 fill: theme.palette.text.primary,
@@ -57,7 +76,7 @@ export default function Chart() {
                     ]}
                     series={[
                         {
-                            dataKey: 'amount',
+                            dataKey: 'filledCapacity',
                             showMark: false,
                             color: theme.palette.primary.light,
                         },
@@ -74,3 +93,4 @@ export default function Chart() {
         </React.Fragment>
     );
 }
+
