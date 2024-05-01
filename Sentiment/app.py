@@ -64,3 +64,5 @@ def my_post():
 
 if __name__ == "__main__":
     app.run()
+
+#  App running command  :  python app.py
