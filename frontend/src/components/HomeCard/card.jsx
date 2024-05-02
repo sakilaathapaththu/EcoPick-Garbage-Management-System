@@ -15,7 +15,7 @@ export default function card({ images, title, url,description }) {
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography sx={{ height: 100 }}variant="body2" color="text.secondary">
           {description}
         </Typography>
       </CardContent>
