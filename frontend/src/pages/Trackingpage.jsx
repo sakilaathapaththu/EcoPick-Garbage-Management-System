@@ -96,6 +96,7 @@ import Box from "@mui/material/Box";
 import Footer from "../components/Footer/Footer";
 import { API_BASE_URL } from "../utils/constants";
 import TrackingCardview from "../components/Tracking/TrackingCardview";
+import Iconmarker from '../assets/images/marker.png';
 
 const libraries = ["places"];
 const mapContainerStyle = {
@@ -132,7 +133,7 @@ const Trackingpage = () => {
         const response = await axios.get(`${API_BASE_URL}/api/get/data-location`);
         if (response.data && response.data.length > 0) {
           const { latitude, longitude } = response.data[0];
-          setMarker({ lat: latitude, lng: longitude });
+          setMarker({ lat: latitude, lng: longitude, content : "https://toppng.com/uploads/preview/in-location-map-icon-navigation-symbol-ma-google-maps-marker-blue-11562916561qaf3tyejum.png" });
         } else {
           console.error("No location data available");
         }
@@ -201,7 +202,7 @@ const Trackingpage = () => {
               center={marker}
               onLoad={onMapLoad}
             >
-              {marker && <Marker position={marker} />}
+              {marker && <Marker position={marker} icon={Iconmarker} />}
             </GoogleMap>
           </Grid>
           <Grid item xs={5}>
