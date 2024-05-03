@@ -1,47 +1,29 @@
-2024-05-03 12:06:43,410 - INFO - Flask server started
-2024-05-03 12:06:43,431 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-05-03 13:19:42,791 - INFO - Flask server started
+2024-05-03 13:19:42,797 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2024-05-03 12:06:43,431 - INFO - [33mPress CTRL+C to quit[0m
-2024-05-03 12:07:09,501 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-05-03 12:07:09,595 - INFO - 127.0.0.1 - - [03/May/2024 12:07:09] "GET / HTTP/1.1" 200 -
-2024-05-03 12:07:09,689 - INFO - 127.0.0.1 - - [03/May/2024 12:07:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 12:07:09,690 - INFO - 127.0.0.1 - - [03/May/2024 12:07:09] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-05-03 12:07:11,473 - INFO - 127.0.0.1 - - [03/May/2024 12:07:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-05-03 12:07:29,260 - ERROR - Failed to connect to MongoDB
-2024-05-03 12:07:29,264 - INFO - Preprocessed Text : 0    good good
+2024-05-03 13:19:42,798 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-03 13:19:50,812 - INFO - ============== OPEN HOME PAGE =================
+2024-05-03 13:19:50,818 - INFO - 127.0.0.1 - - [03/May/2024 13:19:50] "GET / HTTP/1.1" 200 -
+2024-05-03 13:19:50,926 - INFO - 127.0.0.1 - - [03/May/2024 13:19:50] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 13:19:50,937 - INFO - 127.0.0.1 - - [03/May/2024 13:19:50] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 13:20:07,993 - INFO - Preprocessed Text : 0    nice posit good
 Name: tweet, dtype: object
-2024-05-03 12:07:29,265 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
-2024-05-03 12:07:29,266 - INFO -  Prediction : negative
-2024-05-03 12:07:29,266 - INFO - 127.0.0.1 - - [03/May/2024 12:07:29] "[32mPOST / HTTP/1.1[0m" 302 -
-2024-05-03 12:07:29,272 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-05-03 12:07:29,273 - INFO - 127.0.0.1 - - [03/May/2024 12:07:29] "GET / HTTP/1.1" 200 -
-2024-05-03 12:07:29,289 - INFO - 127.0.0.1 - - [03/May/2024 12:07:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 12:07:29,290 - INFO - 127.0.0.1 - - [03/May/2024 12:07:29] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-05-03 12:10:58,332 - ERROR - Failed to connect to MongoDB
-2024-05-03 12:10:58,334 - INFO - Preprocessed Text : 0    effort commend
-Name: tweet, dtype: object
-2024-05-03 12:10:58,335 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
-2024-05-03 12:10:58,335 - INFO -  Prediction : negative
-2024-05-03 12:10:58,336 - INFO - 127.0.0.1 - - [03/May/2024 12:10:58] "[32mPOST / HTTP/1.1[0m" 302 -
-2024-05-03 12:10:58,341 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-05-03 12:10:58,342 - INFO - 127.0.0.1 - - [03/May/2024 12:10:58] "GET / HTTP/1.1" 200 -
-2024-05-03 12:10:58,360 - INFO - 127.0.0.1 - - [03/May/2024 12:10:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 12:10:58,362 - INFO - 127.0.0.1 - - [03/May/2024 12:10:58] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-05-03 12:11:20,480 - ERROR - Failed to connect to MongoDB
-2024-05-03 12:11:20,482 - INFO - Preprocessed Text : 0    good good good
-Name: tweet, dtype: object
-2024-05-03 12:11:20,483 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
-2024-05-03 12:11:20,484 - INFO -  Prediction : negative
-2024-05-03 12:11:20,485 - INFO - 127.0.0.1 - - [03/May/2024 12:11:20] "[32mPOST / HTTP/1.1[0m" 302 -
-2024-05-03 12:11:20,490 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-05-03 12:11:20,491 - INFO - 127.0.0.1 - - [03/May/2024 12:11:20] "GET / HTTP/1.1" 200 -
-2024-05-03 12:11:20,507 - INFO - 127.0.0.1 - - [03/May/2024 12:11:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 12:11:20,509 - INFO - 127.0.0.1 - - [03/May/2024 12:11:20] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-05-03 12:17:51,418 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-05-03 12:17:51,419 - INFO - 127.0.0.1 - - [03/May/2024 12:17:51] "GET / HTTP/1.1" 200 -
-2024-05-03 12:17:51,456 - INFO - 127.0.0.1 - - [03/May/2024 12:17:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 12:17:51,458 - INFO - 127.0.0.1 - - [03/May/2024 12:17:51] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-05-03 12:26:42,574 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-05-03 12:26:42,575 - INFO - 127.0.0.1 - - [03/May/2024 12:26:42] "GET / HTTP/1.1" 200 -
-2024-05-03 12:26:42,610 - INFO - 127.0.0.1 - - [03/May/2024 12:26:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 12:26:42,611 - INFO - 127.0.0.1 - - [03/May/2024 12:26:42] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 13:20:07,994 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-05-03 13:20:07,995 - INFO -  Prediction : positive
+2024-05-03 13:20:08,761 - INFO - 127.0.0.1 - - [03/May/2024 13:20:08] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-05-03 13:20:08,766 - INFO - ============== OPEN HOME PAGE =================
+2024-05-03 13:20:08,767 - INFO - 127.0.0.1 - - [03/May/2024 13:20:08] "GET / HTTP/1.1" 200 -
+2024-05-03 13:20:08,783 - INFO - 127.0.0.1 - - [03/May/2024 13:20:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 13:20:08,784 - INFO - 127.0.0.1 - - [03/May/2024 13:20:08] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 14:02:20,147 - INFO - ============== OPEN HOME PAGE =================
+2024-05-03 14:02:20,166 - INFO - 127.0.0.1 - - [03/May/2024 14:02:20] "GET / HTTP/1.1" 200 -
+2024-05-03 14:02:20,210 - INFO - 127.0.0.1 - - [03/May/2024 14:02:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 14:02:20,225 - INFO - 127.0.0.1 - - [03/May/2024 14:02:20] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 14:02:39,251 - INFO - ============== OPEN HOME PAGE =================
+2024-05-03 14:02:39,252 - INFO - 127.0.0.1 - - [03/May/2024 14:02:39] "GET / HTTP/1.1" 200 -
+2024-05-03 14:02:39,279 - INFO - 127.0.0.1 - - [03/May/2024 14:02:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 14:02:39,281 - INFO - 127.0.0.1 - - [03/May/2024 14:02:39] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 14:02:51,714 - INFO - ============== OPEN HOME PAGE =================
+2024-05-03 14:02:51,715 - INFO - 127.0.0.1 - - [03/May/2024 14:02:51] "GET / HTTP/1.1" 200 -
+2024-05-03 14:02:51,772 - INFO - 127.0.0.1 - - [03/May/2024 14:02:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 14:02:51,774 - INFO - 127.0.0.1 - - [03/May/2024 14:02:51] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -

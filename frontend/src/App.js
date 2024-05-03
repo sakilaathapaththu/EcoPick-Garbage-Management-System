@@ -15,6 +15,7 @@ import AllDriversList from "./pages/AllDriversList";
 import RegisterDriver from "./pages/Driver/Register";
 import ViewDriverprofile from "./pages/Driver/FetchDriver";
 import UpdateDriver from "./pages/Driver/UpdateDriver";
+import About from "./pages/About";
 
 // import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -62,6 +63,8 @@ function AppRouter() {
         <Route path="/RegisterDriver" element={<RegisterDriver/>} />
         <Route path="/ViewDriverProfile/:id" element={<ViewDriverprofile/>} />
         <Route path="/update-driver/:id" element={<UpdateDriver />} />
+        <Route path="/About" element={<About />} />
+
 
         {/* <Route path="/About" element={<About/>} /> */}
         <Route path="/Contact" element={<Contact/>} />
