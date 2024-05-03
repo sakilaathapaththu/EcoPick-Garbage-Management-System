@@ -11,6 +11,10 @@ import Trackingpage from "./pages/Trackingpage";
 import Addcollectingdata from './pages/Addcollectingdata';
 import Viewfillingrecode from "./pages/Viewfillingrecode";
 import Profilepage from "./pages/Profilepage";
+import AllDriversList from "./pages/AllDriversList";
+import RegisterDriver from "./pages/Driver/Register";
+import ViewDriverprofile from "./pages/Driver/FetchDriver";
+import UpdateDriver from "./pages/Driver/UpdateDriver";
 
 // import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -27,8 +31,9 @@ function App() {
 function AppRouter() {
   // Custom hook to get the current location
   const location = useLocation();
+  
   // Array of paths where Navbar should be hidden
-  const hiddenPaths = ["/Login", "/Dashboard","/","/Addcollectingdata","/Viewfillingrecode"];
+  const hiddenPaths = ["/Login", "/Dashboard","/","/Addcollectingdata","/Viewfillingrecode","/ViewAllDriversList","/RegisterDriver"];
 
  
   // Function to check if the current path is in hiddenPaths
@@ -53,7 +58,10 @@ function AppRouter() {
         <Route path="/Tracking" element={<Trackingpage />} />
         <Route path="/Addcollectingdata" element={<Addcollectingdata/>} />
         <Route path="/Viewfillingrecode" element={<Viewfillingrecode/>} />
-
+        <Route path="/ViewAllDriversList" element={<AllDriversList/>} />
+        <Route path="/RegisterDriver" element={<RegisterDriver/>} />
+        <Route path="/ViewDriverProfile/:id" element={<ViewDriverprofile/>} />
+        <Route path="/update-driver/:id" element={<UpdateDriver />} />
 
         {/* <Route path="/About" element={<About/>} /> */}
         <Route path="/Contact" element={<Contact/>} />

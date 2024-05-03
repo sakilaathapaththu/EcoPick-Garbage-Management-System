@@ -285,7 +285,7 @@ export default function Addfillingdetail() {
           />
         </Grid>
       </Grid>
-      <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }} disabled={isCapacityFilled}>
+      <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }}  style={{ backgroundColor: '#3EA055', color: '#FFFFFF' }} disabled={isCapacityFilled}>
         Add
       </Button>
     </Box>

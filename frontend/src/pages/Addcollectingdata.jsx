@@ -87,12 +87,14 @@ export default function Addcollectingdata() {
           sx={{
             pr: '24px', // keep right padding when drawer closed
           }}
+          style={{ backgroundColor: '#3EA055', color: '#FFFFFF' }}
         >
           <IconButton
             edge="start"
             color="inherit"
             aria-label="open drawer"
             onClick={toggleDrawer}
+            
             sx={{
               marginRight: '36px',
               ...(open && { display: 'none' }),

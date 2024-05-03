@@ -192,7 +192,7 @@ export default function LoadFillingdetails() {
             onChange={handleSearchDateChange}
           />
         </Search>
-        <Button variant="contained" onClick={handleSearchByDate}>Search</Button>
+        <Button variant="contained" onClick={handleSearchByDate}  style={{ backgroundColor: '#3EA055', color: '#FFFFFF' }}>Search</Button>
       </Box>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
@@ -265,7 +265,7 @@ export default function LoadFillingdetails() {
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
       <Box sx={{ mt: 2 }}>
-        <Button variant="contained" onClick={handleGenerateReport}>Generate Report</Button>
+        <Button variant="contained" onClick={handleGenerateReport}  style={{ backgroundColor: '#3EA055', color: '#FFFFFF' }}>Generate Report</Button>
       </Box>
     </Paper>
   );

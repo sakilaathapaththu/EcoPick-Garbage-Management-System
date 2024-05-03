@@ -40,6 +40,9 @@ app.use("/Api/Fillingdetails", fillingdetailRoutes);
 const getallfillingdetailsRoutes = require("./routes/getallfillingdetailsRoute.js");
 app.use("/Api/GetallfillingdetailsRoutes", getallfillingdetailsRoutes);
 
+const driverRouter = require("./routes/driversRoute.js");
+app.use("/drivers",driverRouter);
+
 // const employeeRouter = require("./Routes/employees");
 // app.use("/employees", employeeRouter);
 

@@ -92,6 +92,7 @@ export default function Dashboard() {
           sx={{
             pr: '24px', // keep right padding when drawer closed
           }}
+          style={{ backgroundColor: '#3EA055', color: '#FFFFFF' }}
         >
           <IconButton
             edge="start"
