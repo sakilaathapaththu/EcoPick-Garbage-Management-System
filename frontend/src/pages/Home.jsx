@@ -60,7 +60,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={2} sm={3} md={3}>
             <Item>
-              <CardComponent images={aboutuspic} title={title03} url={'#'} description={description03} />
+              <CardComponent images={aboutuspic} title={title03} url={'/About'} description={description03} />
             </Item>
           </Grid>
           <Grid item xs={2} sm={3} md={3}>

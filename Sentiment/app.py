@@ -4,8 +4,10 @@ from logger import logging
 from pymongo import MongoClient
 
 # Connect to MongoDB Atlas
-client = MongoClient("mongodb+srv://praveen:praveen123@cluster0.lcou8zr.mongodb.net/main")
-db = client["main"]
+# client = MongoClient("mongodb+srv://praveen:praveen123@cluster0.lcou8zr.mongodb.net/main")
+client = MongoClient("mongodb+srv://sakila:sakila123@client.cvrtm65.mongodb.net/test")
+# db = client["main"]
+db = client["test"]
 collection = db["feedback"]
 # praveen123
 # praveen
