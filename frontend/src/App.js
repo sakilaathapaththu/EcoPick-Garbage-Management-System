@@ -33,7 +33,7 @@ function AppRouter() {
   const location = useLocation();
   
   // Array of paths where Navbar should be hidden
-  const hiddenPaths = ["/Login", "/Dashboard","/","/Addcollectingdata","/Viewfillingrecode","/ViewAllDriversList","/RegisterDriver"];
+  const hiddenPaths = ["/Login", "/Dashboard","/","/Addcollectingdata","/Viewfillingrecode","/ViewAllDriversList","/RegisterDriver","/Signup"];
 
  
   // Function to check if the current path is in hiddenPaths

@@ -93,7 +93,7 @@ const Signup = () => {
   };
 
   return (
-    <Grid container spacing={2} sx={{ height: "100vh", mt: "5%" }}>
+    <Grid container spacing={2} sx={{ height: "100vh" }}>
       <Grid item xs={12} md={6}>
         <Box
           sx={{
