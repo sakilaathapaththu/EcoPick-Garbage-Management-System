@@ -35,12 +35,12 @@ const LogoutButton = () => {
 
 export const mainListItems = (
   <React.Fragment>
-    {/* <ListItemButton component={Link} to="/Dashboard">
+    <ListItemButton component={Link} to="/Dashboard">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
-    </ListItemButton> */}
+    </ListItemButton>
 
     <ListItemButton component={Link} to="/ViewAllDriversList">
       <ListItemIcon>
