@@ -10,19 +10,22 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
+
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Link from '@mui/material/Link';
+
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+
 import { mainListItems } from '../components/Dashboard/Listitemname';
+import AllDrivers from './Driver/AllDrivers';
 
-import LoadFillingdetails from '../components/Dashboard/LoadFillingdetails';
 
-const drawerWidth = 240;
+
+
+  
+  const drawerWidth = 240;
   
   const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
@@ -71,7 +74,8 @@ const drawerWidth = 240;
   // TODO remove, this demo shouldn't need to reset the theme.
   const defaultTheme = createTheme();
 
-export default function Viewfillingrecode() {
+
+export default function AllDriversList() {
     const [open, setOpen] = useState();
     const toggleDrawer = () => {
       setOpen(!open);
@@ -149,13 +153,20 @@ export default function Viewfillingrecode() {
           }}
         >
           <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+          <Container maxWidth="lg" sx={{ mt: 4 }}>
             <Grid container spacing={3}>
-              {/* Add loaction details */}
+              
               <Grid item xs={12} md={12} lg={12}>
-                
-                <LoadFillingdetails/>
-                
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    // height:240,
+                  }}
+                >
+                  <AllDrivers />
+                </Paper>
               </Grid>
               
             </Grid>
@@ -164,11 +175,5 @@ export default function Viewfillingrecode() {
         </Box>
       </Box>
     </ThemeProvider>
-    )
-  }
-
-
-
-
-
- 
+  )
+}

@@ -1,45 +1,4 @@
-// import * as React from 'react';
-// import ListItemButton from '@mui/material/ListItemButton';
-// import ListItemIcon from '@mui/material/ListItemIcon';
-// import ListItemText from '@mui/material/ListItemText';
-// import LogoutIcon from '@mui/icons-material/Logout';
-// import DashboardIcon from '@mui/icons-material/Dashboard';
-// import AddIcon from '@mui/icons-material/Add';
-// import FeedbackIcon from '@mui/icons-material/Feedback';
 
-
-// import { Link } from 'react-router-dom';
-
-// export const mainListItems = (
-//   <React.Fragment>
-//     <ListItemButton component={Link} to="/Dashboard">
-//       <ListItemIcon>
-//         <DashboardIcon />
-//       </ListItemIcon>
-//       <ListItemText primary="Dashboard" />
-//     </ListItemButton>
-    
-//     <ListItemButton component={Link} to="/Addcollectingdata" >
-//       <ListItemIcon>
-//         <AddIcon/>
-//       </ListItemIcon>
-//       <ListItemText primary="Add Collecting Details" />
-//     </ListItemButton>
-   
-//     <ListItemButton component={Link} to="">
-//       <ListItemIcon>
-//         <FeedbackIcon />
-//       </ListItemIcon>
-//       <ListItemText primary="View Feedback" />
-//     </ListItemButton>
-//     <ListItemButton component={Link} to="">
-//       <ListItemIcon>
-//         <LogoutIcon />
-//       </ListItemIcon>
-//       <ListItemText primary="Logout" />
-//     </ListItemButton>
-//   </React.Fragment>
-// );
 import * as React from 'react';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -49,6 +8,7 @@ import DvrIcon from '@mui/icons-material/Dvr';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import AddIcon from '@mui/icons-material/Add';
 import FeedbackIcon from '@mui/icons-material/Feedback';
+import DriveEtaIcon from '@mui/icons-material/DriveEta';
 import { Link, useNavigate } from 'react-router-dom';
 
 const LogoutButton = () => {
@@ -81,7 +41,14 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItemButton>
-    
+
+    <ListItemButton component={Link} to="/ViewAllDriversList">
+      <ListItemIcon>
+        <DriveEtaIcon />
+      </ListItemIcon>
+      <ListItemText primary="All Drivers" />
+    </ListItemButton>
+
     <ListItemButton component={Link} to="/Addcollectingdata" >
       <ListItemIcon>
         <AddIcon/>

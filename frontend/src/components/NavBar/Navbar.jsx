@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed"  sx={{ backgroundColor: "#033624" }}>
+      <AppBar position="fixed"  sx={{ backgroundColor: "#3EA055" }}>
         <Toolbar>
           {/* <IconButton
             size="large"

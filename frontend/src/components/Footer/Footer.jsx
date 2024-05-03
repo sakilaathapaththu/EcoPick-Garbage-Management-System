@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 
 // Define styled components for styling
 const RootContainer = styled("div")({
-  backgroundColor: "#033624",
+  backgroundColor: "#3EA055",
   maxWidth: "100%",
   margin: "auto",
   padding: "40px",

@@ -70,6 +70,15 @@ router.get('/last/fillingdetail', async (req, res) => {
   }
 });
 
+// Route to get all filling details
+router.get('/filling-details', async (req, res) => {
+  try {
+    const fillingDetails = await FillingDetail.find();
+    res.json(fillingDetails);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 module.exports = router;
 

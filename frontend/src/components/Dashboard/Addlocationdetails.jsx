@@ -308,7 +308,7 @@ const Addlocationdetails = () => {
           </FormControl>
         </Grid>
       </Grid>
-      <Button type="submit" variant="contained" sx={{ mt: 3, mb: 11 }}>
+      <Button type="submit" variant="contained" sx={{ mt: 3, mb: 11 }} style={{ backgroundColor: '#3EA055', color: '#FFFFFF' }}>
         Add
       </Button>
     </Box>

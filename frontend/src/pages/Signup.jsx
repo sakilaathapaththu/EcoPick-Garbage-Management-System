@@ -15,6 +15,7 @@ import Link from "@mui/material/Link";
 import Lottie from "react-lottie";
 import Registerimage from "../assets/animation/register.json";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../utils/constants";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -81,7 +82,7 @@ const Signup = () => {
     });
 
     try {
-      const res = await axios.post("http://localhost:8800/api/users", userData);
+      const res = await axios.post(`${API_BASE_URL}/api/users`, userData);
       console.log(res.data);
       alert("User registered successfully!");
       navigate("/Login"); // Redirect to /Login after successful registration
@@ -92,7 +93,7 @@ const Signup = () => {
   };
 
   return (
-    <Grid container spacing={2} sx={{ height: "100vh", mt: "5%" }}>
+    <Grid container spacing={2} sx={{ height: "100vh" }}>
       <Grid item xs={12} md={6}>
         <Box
           sx={{
@@ -236,6 +237,7 @@ const Signup = () => {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3 }}
+                style={{background:"#3EA055"}}
               >
                 Sign Up
               </Button>

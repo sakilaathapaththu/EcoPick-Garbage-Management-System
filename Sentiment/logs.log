@@ -1,311 +1,47 @@
-2024-04-13 22:03:26,352 - INFO - Flask server started
-2024-04-13 22:03:26,361 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-05-03 12:06:43,410 - INFO - Flask server started
+2024-05-03 12:06:43,431 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2024-04-13 22:03:26,361 - INFO - [33mPress CTRL+C to quit[0m
-2024-04-13 22:03:34,130 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:03:34,281 - INFO - 127.0.0.1 - - [13/Apr/2024 22:03:34] "GET / HTTP/1.1" 200 -
-2024-04-13 22:03:34,363 - INFO - 127.0.0.1 - - [13/Apr/2024 22:03:34] "GET /static/products/feedback.jpg HTTP/1.1" 200 -
-2024-04-13 22:03:34,364 - INFO - 127.0.0.1 - - [13/Apr/2024 22:03:34] "GET /static/css/main.css HTTP/1.1" 200 -
-2024-04-13 22:03:34,451 - INFO - 127.0.0.1 - - [13/Apr/2024 22:03:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-04-13 22:05:09,736 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:05:09,737 - INFO - 127.0.0.1 - - [13/Apr/2024 22:05:09] "GET / HTTP/1.1" 200 -
-2024-04-13 22:05:09,772 - INFO - 127.0.0.1 - - [13/Apr/2024 22:05:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:05:09,774 - INFO - 127.0.0.1 - - [13/Apr/2024 22:05:09] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:05:33,591 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:05:33,592 - INFO - 127.0.0.1 - - [13/Apr/2024 22:05:33] "GET / HTTP/1.1" 200 -
-2024-04-13 22:05:33,626 - INFO - 127.0.0.1 - - [13/Apr/2024 22:05:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:05:33,628 - INFO - 127.0.0.1 - - [13/Apr/2024 22:05:33] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:07:22,119 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:07:22,120 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:22] "GET / HTTP/1.1" 200 -
-2024-04-13 22:07:22,152 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:22] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:07:22,153 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:22] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:07:30,413 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:07:30,413 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:30] "GET / HTTP/1.1" 200 -
-2024-04-13 22:07:30,431 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:07:30,433 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:30] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:07:30,982 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:07:30,983 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:30] "GET / HTTP/1.1" 200 -
-2024-04-13 22:07:31,008 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:07:31,010 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:31] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:07:31,492 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:07:31,493 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:31] "GET / HTTP/1.1" 200 -
-2024-04-13 22:07:31,515 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:07:31,517 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:31] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:07:35,374 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:35] "[33mGET /test HTTP/1.1[0m" 404 -
-2024-04-13 22:07:56,525 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:56] "[33mGET /test HTTP/1.1[0m" 404 -
-2024-04-13 22:07:57,267 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:57] "[33mGET /test HTTP/1.1[0m" 404 -
-2024-04-13 22:07:57,463 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:57] "[33mGET /test HTTP/1.1[0m" 404 -
-2024-04-13 22:07:57,632 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:57] "[33mGET /test HTTP/1.1[0m" 404 -
-2024-04-13 22:07:57,773 - INFO - 127.0.0.1 - - [13/Apr/2024 22:07:57] "[33mGET /test HTTP/1.1[0m" 404 -
-2024-04-13 22:08:11,470 - INFO - 127.0.0.1 - - [13/Apr/2024 22:08:11] "[33mGET /test HTTP/1.1[0m" 404 -
-2024-04-13 22:08:16,219 - INFO - 127.0.0.1 - - [13/Apr/2024 22:08:16] "[33mGET /test HTTP/1.1[0m" 404 -
-2024-04-13 22:08:20,070 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:08:20,071 - INFO - 127.0.0.1 - - [13/Apr/2024 22:08:20] "GET / HTTP/1.1" 200 -
-2024-04-13 22:08:20,093 - INFO - 127.0.0.1 - - [13/Apr/2024 22:08:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:08:20,094 - INFO - 127.0.0.1 - - [13/Apr/2024 22:08:20] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:09:12,276 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-    ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:09:12,282 - INFO - 127.0.0.1 - - [13/Apr/2024 22:09:12] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:09:21,436 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-    ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:09:21,439 - INFO - 127.0.0.1 - - [13/Apr/2024 22:09:21] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:10:02,779 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-    ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:10:02,784 - INFO - 127.0.0.1 - - [13/Apr/2024 22:10:02] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:10:03,893 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-    ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:10:03,896 - INFO - 127.0.0.1 - - [13/Apr/2024 22:10:03] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:10:04,440 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-    ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:10:04,444 - INFO - 127.0.0.1 - - [13/Apr/2024 22:10:04] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:10:04,903 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-    ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:10:04,906 - INFO - 127.0.0.1 - - [13/Apr/2024 22:10:04] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:11:30,388 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-    ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:11:30,393 - INFO - 127.0.0.1 - - [13/Apr/2024 22:11:30] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:13:29,410 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:13:29,410 - INFO - 127.0.0.1 - - [13/Apr/2024 22:13:29] "GET / HTTP/1.1" 200 -
-2024-04-13 22:13:29,433 - INFO - 127.0.0.1 - - [13/Apr/2024 22:13:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:13:29,434 - INFO - 127.0.0.1 - - [13/Apr/2024 22:13:29] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:13:47,594 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    #     db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-        ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:13:47,607 - INFO - 127.0.0.1 - - [13/Apr/2024 22:13:47] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:15:53,024 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    #     db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-        ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:15:53,027 - INFO - 127.0.0.1 - - [13/Apr/2024 22:15:53] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:17:05,689 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:17:05,690 - INFO - 127.0.0.1 - - [13/Apr/2024 22:17:05] "GET / HTTP/1.1" 200 -
-2024-04-13 22:17:05,710 - INFO - 127.0.0.1 - - [13/Apr/2024 22:17:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:17:05,715 - INFO - 127.0.0.1 - - [13/Apr/2024 22:17:05] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:17:06,499 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:17:06,500 - INFO - 127.0.0.1 - - [13/Apr/2024 22:17:06] "GET / HTTP/1.1" 200 -
-2024-04-13 22:17:06,520 - INFO - 127.0.0.1 - - [13/Apr/2024 22:17:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:17:06,522 - INFO - 127.0.0.1 - - [13/Apr/2024 22:17:06] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:17:19,275 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    #     db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-        ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:17:19,288 - INFO - 127.0.0.1 - - [13/Apr/2024 22:17:19] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:18:40,819 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:18:40,820 - INFO - 127.0.0.1 - - [13/Apr/2024 22:18:40] "GET / HTTP/1.1" 200 -
-2024-04-13 22:18:40,849 - INFO - 127.0.0.1 - - [13/Apr/2024 22:18:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:18:40,851 - INFO - 127.0.0.1 - - [13/Apr/2024 22:18:40] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:19:05,587 - ERROR - Exception on / [POST]
-Traceback (most recent call last):
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\my\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\SLIIT UNI\projects\ITPM\Sentiment\app.py", line 38, in my_post
-    #     db.inventory.insert_one({"username": name, "email": email,'feedback' : text})
-        ^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inventory'
-2024-04-13 22:19:05,600 - INFO - 127.0.0.1 - - [13/Apr/2024 22:19:05] "[35m[1mPOST / HTTP/1.1[0m" 500 -
-2024-04-13 22:20:23,567 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:20:23,568 - INFO - 127.0.0.1 - - [13/Apr/2024 22:20:23] "GET / HTTP/1.1" 200 -
-2024-04-13 22:20:23,601 - INFO - 127.0.0.1 - - [13/Apr/2024 22:20:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:20:23,602 - INFO - 127.0.0.1 - - [13/Apr/2024 22:20:23] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-04-13 22:23:43,378 - INFO - ============== OPEN FEEDBACK PAGE =================
-2024-04-13 22:23:43,379 - INFO - 127.0.0.1 - - [13/Apr/2024 22:23:43] "GET / HTTP/1.1" 200 -
-2024-04-13 22:23:43,423 - INFO - 127.0.0.1 - - [13/Apr/2024 22:23:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-04-13 22:23:43,425 - INFO - 127.0.0.1 - - [13/Apr/2024 22:23:43] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 12:06:43,431 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-03 12:07:09,501 - INFO - ============== OPEN FEEDBACK PAGE =================
+2024-05-03 12:07:09,595 - INFO - 127.0.0.1 - - [03/May/2024 12:07:09] "GET / HTTP/1.1" 200 -
+2024-05-03 12:07:09,689 - INFO - 127.0.0.1 - - [03/May/2024 12:07:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 12:07:09,690 - INFO - 127.0.0.1 - - [03/May/2024 12:07:09] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 12:07:11,473 - INFO - 127.0.0.1 - - [03/May/2024 12:07:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-03 12:07:29,260 - ERROR - Failed to connect to MongoDB
+2024-05-03 12:07:29,264 - INFO - Preprocessed Text : 0    good good
+Name: tweet, dtype: object
+2024-05-03 12:07:29,265 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-05-03 12:07:29,266 - INFO -  Prediction : negative
+2024-05-03 12:07:29,266 - INFO - 127.0.0.1 - - [03/May/2024 12:07:29] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-05-03 12:07:29,272 - INFO - ============== OPEN FEEDBACK PAGE =================
+2024-05-03 12:07:29,273 - INFO - 127.0.0.1 - - [03/May/2024 12:07:29] "GET / HTTP/1.1" 200 -
+2024-05-03 12:07:29,289 - INFO - 127.0.0.1 - - [03/May/2024 12:07:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 12:07:29,290 - INFO - 127.0.0.1 - - [03/May/2024 12:07:29] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 12:10:58,332 - ERROR - Failed to connect to MongoDB
+2024-05-03 12:10:58,334 - INFO - Preprocessed Text : 0    effort commend
+Name: tweet, dtype: object
+2024-05-03 12:10:58,335 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-05-03 12:10:58,335 - INFO -  Prediction : negative
+2024-05-03 12:10:58,336 - INFO - 127.0.0.1 - - [03/May/2024 12:10:58] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-05-03 12:10:58,341 - INFO - ============== OPEN FEEDBACK PAGE =================
+2024-05-03 12:10:58,342 - INFO - 127.0.0.1 - - [03/May/2024 12:10:58] "GET / HTTP/1.1" 200 -
+2024-05-03 12:10:58,360 - INFO - 127.0.0.1 - - [03/May/2024 12:10:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 12:10:58,362 - INFO - 127.0.0.1 - - [03/May/2024 12:10:58] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 12:11:20,480 - ERROR - Failed to connect to MongoDB
+2024-05-03 12:11:20,482 - INFO - Preprocessed Text : 0    good good good
+Name: tweet, dtype: object
+2024-05-03 12:11:20,483 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-05-03 12:11:20,484 - INFO -  Prediction : negative
+2024-05-03 12:11:20,485 - INFO - 127.0.0.1 - - [03/May/2024 12:11:20] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-05-03 12:11:20,490 - INFO - ============== OPEN FEEDBACK PAGE =================
+2024-05-03 12:11:20,491 - INFO - 127.0.0.1 - - [03/May/2024 12:11:20] "GET / HTTP/1.1" 200 -
+2024-05-03 12:11:20,507 - INFO - 127.0.0.1 - - [03/May/2024 12:11:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 12:11:20,509 - INFO - 127.0.0.1 - - [03/May/2024 12:11:20] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 12:17:51,418 - INFO - ============== OPEN FEEDBACK PAGE =================
+2024-05-03 12:17:51,419 - INFO - 127.0.0.1 - - [03/May/2024 12:17:51] "GET / HTTP/1.1" 200 -
+2024-05-03 12:17:51,456 - INFO - 127.0.0.1 - - [03/May/2024 12:17:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 12:17:51,458 - INFO - 127.0.0.1 - - [03/May/2024 12:17:51] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-03 12:26:42,574 - INFO - ============== OPEN FEEDBACK PAGE =================
+2024-05-03 12:26:42,575 - INFO - 127.0.0.1 - - [03/May/2024 12:26:42] "GET / HTTP/1.1" 200 -
+2024-05-03 12:26:42,610 - INFO - 127.0.0.1 - - [03/May/2024 12:26:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-03 12:26:42,611 - INFO - 127.0.0.1 - - [03/May/2024 12:26:42] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
