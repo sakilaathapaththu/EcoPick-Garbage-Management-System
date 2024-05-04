@@ -56,7 +56,7 @@ export const mainListItems = (
       <ListItemText primary="Add Collecting Details" />
     </ListItemButton>
    
-    <ListItemButton component={Link} to="">
+    <ListItemButton component={Link} to="/AllFeedback">
       <ListItemIcon>
         <FeedbackIcon />
       </ListItemIcon>
