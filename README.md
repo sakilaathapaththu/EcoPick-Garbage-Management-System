@@ -1,6 +1,6 @@
 # EcoPick : Online Garbage Management System
 
-EcoPick is an innovative online garbage management system. The system integrates live tracking, sentiment analysis feedback, and an effective user and driver management system to streamline waste management processes.
+EcoPick is an innovative online garbage management system. The system integrates live tracking, sentiment analysis feedback, and efficient user and driver management system to streamline waste management processes.
 
 ## Features
 
