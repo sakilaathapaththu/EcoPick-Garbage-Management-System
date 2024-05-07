@@ -1,6 +1,6 @@
 # EcoPick : Online Garbage Management System
 
-EcoPick is an innovative online garbage management system. The system integrates live tracking, sentiment analysis feedback, and efficient user and driver management system to streamline waste management processes.
+EcoPick is a modern online garbage management system that incorporates live tracking, sentiment analysis feedback, and robust user and driver management functionalities. This integrated system optimizes waste management processes by providing real-time monitoring, analyzing user feedback sentiment, and effectively managing users and drivers for efficient operation.
 
 ## Features
 
@@ -39,10 +39,10 @@ https://github.com/sakilaathapaththu/ITPM.git
 5. **Access EcoPick**: Open your web browser and navigate to `http://localhost:3000` to access the EcoPick application.
 
 ## Contributors
-- [Sakila Athapaththu](https://github.com/sakilaathapaththu) - **Project Lead** - Done by **Live Tracking System**
-- [Praveen Liyanage](https://github.com/PraveenLiyanage) - Done by **Sentiment Analysed Feedback System**
-- [Chamodi Kumanayaka](https://github.com/IT21387708CTKUMANAYAKA) - Done by **User Management System**
-- [Kavishka Sathsarani](https://github.com/KavishkaBingun) - Done by **Driver Management System**
+- [Sakila Athapaththu](https://github.com/sakilaathapaththu) - **Team Lead** - **Live Tracking System**
+- [Praveen Liyanage](https://github.com/PraveenLiyanage) - **Sentiment Analysed Feedback System**
+- [Chamodi Kumanayaka](https://github.com/IT21387708CTKUMANAYAKA) - **User Management System**
+- [Kavishka Sathsarani](https://github.com/KavishkaBingun) - **Driver Management System**
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
