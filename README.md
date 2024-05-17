@@ -31,7 +31,7 @@ EcoPick is a modern online garbage management system that incorporates live trac
 ## Getting Started
 1. **Clone the Repository**: 
 ```
-https://github.com/sakilaathapaththu/ITPM.git
+https://github.com/sakilaathapaththu/EcoPick-Garbage-Management-System.git
 ```
 2. **Install Dependencies**: Navigate to the project directory and run `npm install` for frontend dependencies and `pip install -r requirements.txt` for backend dependencies.
 3. **Run the Application**: Start the backend server by running `npm run dev`, and start the frontend server with `npm start`.
