@@ -20,7 +20,8 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems } from '../components/Dashboard/Listitemname';
 // import { mainListItems, secondaryListItems } from '../components/Dashboard/Listitemname';
-
+import Lottie from "react-lottie";
+import Dashboardani from "../assets/animation/dashboardani.json";
 import Chart from '../components/Dashboard/Chart';
 // import Deposits from './Deposits';
 // import Orders from './Orders';
@@ -92,6 +93,7 @@ export default function Dashboard() {
           sx={{
             pr: '24px', // keep right padding when drawer closed
           }}
+          style={{ backgroundColor: '#3EA055', color: '#FFFFFF' }}
         >
           <IconButton
             edge="start"
@@ -156,39 +158,45 @@ export default function Dashboard() {
         <Toolbar />
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
           <Grid container spacing={3}>
-            {/* Chart */}
-            <Grid item xs={12} md={8} lg={9}>
+            
+            <Grid item xs={12} md={12} lg={12}>
               <Paper
                 sx={{
                   p: 2,
                   display: 'flex',
                   flexDirection: 'column',
-                  height: 240,
+                  // height: 240,
+                  alignItems:'center',
                 }}
               >
-                <Chart />
+                <Typography
+                    gutterBottom
+                    variant="h4"
+                    component="div"
+                    sx={{ textAlign: "center" }}
+                  >
+                   Welcome to EcoPick Dashboard!
+
+                  </Typography>
+                  <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height:500,
+          }}
+        >
+          <Lottie
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: Dashboardani,
+            }}
+          />
+        </Box>
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper
-                sx={{
-                  p: 2,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  height: 240,
-                }}
-              >
-                {/* <Deposits /> */}
-                
-              </Paper>
-            </Grid>
-            {/* Recent Orders */}
-            <Grid item xs={12}>
-              <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                {/* <Orders /> */}
-              </Paper>
-            </Grid>
+           
           </Grid>
           <Box sx={{ pt: 4 }} />
         </Container>

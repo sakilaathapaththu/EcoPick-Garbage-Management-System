@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>App</title>
+</head>
+<body>
+<div class="split left">
+    <div class="centered">
+        <img src="../static/products/feedback.jpg" alt="" style="width: 400%; max-width: 600px;">
+    </div>
+</div>
+
+<div class="split right">
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="text-center mb-3">
+                    <h2>Share Your Thoughts</h2>
+                </div>
+                <form method="post">
+                    <h6 class="text-center mb-3">Your feedback fuels our growth! Share your experience with us.</h6>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="feedback" class="form-label">Your Feedback</label>
+                        <textarea name="text" id="text" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                    <br>
+                    <div class="d-flex justify-content-between mt-3">
+                        <label for="">Positive Feedback: {{ data.positive }}</label>
+                        <label for="">Negative Feedback: {{ data.negative }}</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the feedback text from the form
+        var feedbackText = document.getElementById("feedback").prediction;
+
+        // Add your sentiment analysis logic here
+        // For now, let's assume it's a positive feedback
+        var sentiment = prediction;
+        
+
+        // Display a popup message based on sentiment
+        var popupMessage;
+        if (sentiment === 'positive') {
+            popupMessage = 'Thank you for your positive feedback!';
+        } else {
+            popupMessage = 'Thank you for your feedback. We apologize for any inconvenience and will work to improve.';
+        }
+        alert(popupMessage);
+
+        // You can also reset the form if needed
+        document.getElementById("feedbackForm").reset();
+    });
+</script> -->
+
+</body>
+</html>

@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from "react-router-dom";
 
-export default function card({ images, title, url }) {
+export default function card({ images, title, url,description }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia sx={{ height: 140 }} image={images} title="green iguana" />
@@ -15,9 +15,8 @@ export default function card({ images, title, url }) {
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        <Typography sx={{ height: 100 }}variant="body2" color="text.secondary">
+          {description}
         </Typography>
       </CardContent>
       <CardActions>

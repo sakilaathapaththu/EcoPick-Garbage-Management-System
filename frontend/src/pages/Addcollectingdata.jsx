@@ -87,12 +87,14 @@ export default function Addcollectingdata() {
           sx={{
             pr: '24px', // keep right padding when drawer closed
           }}
+          style={{ backgroundColor: '#3EA055', color: '#FFFFFF' }}
         >
           <IconButton
             edge="start"
             color="inherit"
             aria-label="open drawer"
             onClick={toggleDrawer}
+            
             sx={{
               marginRight: '36px',
               ...(open && { display: 'none' }),
@@ -179,11 +181,11 @@ export default function Addcollectingdata() {
               </Paper>
             </Grid>
             {/* Recent Orders */}
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                {/* <Orders /> */}
+                <Orders /> 
               </Paper>
-            </Grid>
+            </Grid> */}
           </Grid>
           <Box sx={{ pt: 4 }} />
         </Container>

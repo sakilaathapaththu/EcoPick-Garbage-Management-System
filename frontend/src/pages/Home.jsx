@@ -19,6 +19,15 @@ const title02 = "Add Feedback ";
 const title03 = "About Us ";
 const title04 = "Contact Us ";
 
+
+
+const description01="TrackingView enables users to monitor live garbage collection vehicle locations, available filling space, and scheduled routes for efficient waste management";
+const description02="Join the conversation and let your voice shape the future of waste management. Share your thoughts, ideas, and suggestions with us  together, we can create a cleaner, greener world.";
+const description03="Committed to sustainable solutions, we strive to innovate and lead in waste management practices for a greener future.";
+const description04="Have a question or inquiry? Don't hesitate to reach out to our dedicated team for prompt assistance and personalized service.";
+
+
+
 const Item = styled(Box)(({ theme }) => ({
   transition: "transform 0.5s ease", // Define the transition effect for transform
   "&:hover": {
@@ -29,7 +38,7 @@ const Item = styled(Box)(({ theme }) => ({
 export default function Home() {
   return (
     <div>
-    <Box sx={{ flexGrow: 1, mt: "4%", ml: 1, mr: 1 }}>
+    <Box sx={{ flexGrow: 1, mt: "6%", ml: 1, mr: 1 }}>
       <Box>
         <Corousel />
       </Box>
@@ -41,22 +50,22 @@ export default function Home() {
         >
           <Grid item xs={2} sm={3} md={3}>
             <Item>
-              <CardComponent images={slide01} title={title01} url={'/Tracking'} />
+              <CardComponent images={slide01} title={title01} url={'/Tracking'} description={description01} />
             </Item>
           </Grid>
           <Grid item xs={2} sm={3} md={3}>
             <Item>
-              <CardComponent images={feedbackpic} title={title02} />
+              <CardComponent images={feedbackpic} title={title02} url={'http://127.0.0.1:5000/'} description={description02} />
             </Item>
           </Grid>
           <Grid item xs={2} sm={3} md={3}>
             <Item>
-              <CardComponent images={aboutuspic} title={title03} />
+              <CardComponent images={aboutuspic} title={title03} url={'/About'} description={description03} />
             </Item>
           </Grid>
           <Grid item xs={2} sm={3} md={3}>
             <Item>
-              <CardComponent images={contactuspic} title={title04} />
+              <CardComponent images={contactuspic} title={title04} url={'/Contact'} description={description04} />
             </Item>
           </Grid>
         </Grid>

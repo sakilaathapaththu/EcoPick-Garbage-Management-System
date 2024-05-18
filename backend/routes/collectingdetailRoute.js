@@ -5,10 +5,14 @@ const Collectingdetail = require('../models/Collectingdetail');
 
 router.post('/add/collectingdetail', async (req, res) => {
   try {
-    const { startPoint, endPoint, date, garbageType } = req.body;
+    const { startPoint, endPoint, date, garbageType, startPointLat, startPointLong, endPointLat, endPointLong } = req.body;
     const newCollectingdetail = new Collectingdetail({
       startPoint,
+      startPointLat,
+      startPointLong,
       endPoint,
+      endPointLat,
+      endPointLong,
       date,
       garbageType
     });
@@ -31,4 +35,6 @@ router.get('/last/collectingdetail', async (req, res) => {
     }
   });
   
+
+
 module.exports = router;
