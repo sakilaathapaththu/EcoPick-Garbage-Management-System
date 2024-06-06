@@ -2,6 +2,8 @@
 
 EcoPick is a modern online garbage management system that incorporates live tracking, sentiment analysis feedback, and robust user and driver management functionalities. This integrated system optimizes waste management processes by providing real-time monitoring, analyzing user feedback sentiment, and effectively managing users and drivers for efficient operation.
 
+![WhatsApp Image 2024-06-06 at 14 04 04](https://github.com/sakilaathapaththu/EcoPick-Garbage-Management-System/assets/111709030/7dbff402-4b5b-4fb5-83b0-9f074f1f2357)
+
 ## Features
 
 - **Live Tracking System**: Users can track garbage collection activities in real-time, ensuring efficient waste management operations.
