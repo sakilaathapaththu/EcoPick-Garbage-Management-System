@@ -1,29 +1,48 @@
-2024-05-03 13:19:42,791 - INFO - Flask server started
-2024-05-03 13:19:42,797 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-05-04 08:45:07,455 - INFO - Flask server started
+2024-05-04 08:45:07,470 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2024-05-03 13:19:42,798 - INFO - [33mPress CTRL+C to quit[0m
-2024-05-03 13:19:50,812 - INFO - ============== OPEN HOME PAGE =================
-2024-05-03 13:19:50,818 - INFO - 127.0.0.1 - - [03/May/2024 13:19:50] "GET / HTTP/1.1" 200 -
-2024-05-03 13:19:50,926 - INFO - 127.0.0.1 - - [03/May/2024 13:19:50] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 13:19:50,937 - INFO - 127.0.0.1 - - [03/May/2024 13:19:50] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-05-03 13:20:07,993 - INFO - Preprocessed Text : 0    nice posit good
+2024-05-04 08:45:07,470 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-04 08:50:12,050 - INFO - ============== OPEN HOME PAGE =================
+2024-05-04 08:50:12,072 - INFO - 127.0.0.1 - - [04/May/2024 08:50:12] "GET / HTTP/1.1" 200 -
+2024-05-04 08:50:12,213 - INFO - 127.0.0.1 - - [04/May/2024 08:50:12] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-04 08:50:12,215 - INFO - 127.0.0.1 - - [04/May/2024 08:50:12] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-04 08:50:13,012 - INFO - 127.0.0.1 - - [04/May/2024 08:50:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-04 08:54:42,344 - INFO - ============== OPEN HOME PAGE =================
+2024-05-04 08:54:42,344 - INFO - 127.0.0.1 - - [04/May/2024 08:54:42] "GET / HTTP/1.1" 200 -
+2024-05-04 08:54:42,395 - INFO - 127.0.0.1 - - [04/May/2024 08:54:42] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-04 08:54:42,398 - INFO - 127.0.0.1 - - [04/May/2024 08:54:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-04 08:55:48,116 - INFO - Preprocessed Text : 0    great servic best custom servic
 Name: tweet, dtype: object
-2024-05-03 13:20:07,994 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
-2024-05-03 13:20:07,995 - INFO -  Prediction : positive
-2024-05-03 13:20:08,761 - INFO - 127.0.0.1 - - [03/May/2024 13:20:08] "[32mPOST / HTTP/1.1[0m" 302 -
-2024-05-03 13:20:08,766 - INFO - ============== OPEN HOME PAGE =================
-2024-05-03 13:20:08,767 - INFO - 127.0.0.1 - - [03/May/2024 13:20:08] "GET / HTTP/1.1" 200 -
-2024-05-03 13:20:08,783 - INFO - 127.0.0.1 - - [03/May/2024 13:20:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 13:20:08,784 - INFO - 127.0.0.1 - - [03/May/2024 13:20:08] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-05-03 14:02:20,147 - INFO - ============== OPEN HOME PAGE =================
-2024-05-03 14:02:20,166 - INFO - 127.0.0.1 - - [03/May/2024 14:02:20] "GET / HTTP/1.1" 200 -
-2024-05-03 14:02:20,210 - INFO - 127.0.0.1 - - [03/May/2024 14:02:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 14:02:20,225 - INFO - 127.0.0.1 - - [03/May/2024 14:02:20] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-05-03 14:02:39,251 - INFO - ============== OPEN HOME PAGE =================
-2024-05-03 14:02:39,252 - INFO - 127.0.0.1 - - [03/May/2024 14:02:39] "GET / HTTP/1.1" 200 -
-2024-05-03 14:02:39,279 - INFO - 127.0.0.1 - - [03/May/2024 14:02:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 14:02:39,281 - INFO - 127.0.0.1 - - [03/May/2024 14:02:39] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
-2024-05-03 14:02:51,714 - INFO - ============== OPEN HOME PAGE =================
-2024-05-03 14:02:51,715 - INFO - 127.0.0.1 - - [03/May/2024 14:02:51] "GET / HTTP/1.1" 200 -
-2024-05-03 14:02:51,772 - INFO - 127.0.0.1 - - [03/May/2024 14:02:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2024-05-03 14:02:51,774 - INFO - 127.0.0.1 - - [03/May/2024 14:02:51] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-04 08:55:48,118 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-05-04 08:55:48,119 - INFO -  Prediction : positive
+2024-05-04 08:55:49,282 - INFO - 127.0.0.1 - - [04/May/2024 08:55:49] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-05-04 08:55:49,287 - INFO - ============== OPEN HOME PAGE =================
+2024-05-04 08:55:49,288 - INFO - 127.0.0.1 - - [04/May/2024 08:55:49] "GET / HTTP/1.1" 200 -
+2024-05-04 08:55:49,303 - INFO - 127.0.0.1 - - [04/May/2024 08:55:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-04 08:55:49,305 - INFO - 127.0.0.1 - - [04/May/2024 08:55:49] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-04 09:38:29,524 - INFO - ============== OPEN HOME PAGE =================
+2024-05-04 09:38:29,525 - INFO - 127.0.0.1 - - [04/May/2024 09:38:29] "GET / HTTP/1.1" 200 -
+2024-05-04 09:38:29,569 - INFO - 127.0.0.1 - - [04/May/2024 09:38:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-04 09:38:29,571 - INFO - 127.0.0.1 - - [04/May/2024 09:38:29] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-04 09:38:36,098 - INFO - ============== OPEN HOME PAGE =================
+2024-05-04 09:38:36,098 - INFO - 127.0.0.1 - - [04/May/2024 09:38:36] "GET / HTTP/1.1" 200 -
+2024-05-04 09:38:36,117 - INFO - 127.0.0.1 - - [04/May/2024 09:38:36] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-04 09:38:36,122 - INFO - 127.0.0.1 - - [04/May/2024 09:38:36] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-04 09:39:14,876 - INFO - Preprocessed Text : 0    great servic best custom servic
+Name: tweet, dtype: object
+2024-05-04 09:39:14,877 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-05-04 09:39:14,878 - INFO -  Prediction : positive
+2024-05-04 09:39:16,545 - INFO - 127.0.0.1 - - [04/May/2024 09:39:16] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-05-04 09:39:16,551 - INFO - ============== OPEN HOME PAGE =================
+2024-05-04 09:39:16,552 - INFO - 127.0.0.1 - - [04/May/2024 09:39:16] "GET / HTTP/1.1" 200 -
+2024-05-04 09:39:16,569 - INFO - 127.0.0.1 - - [04/May/2024 09:39:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-04 09:39:16,570 - INFO - 127.0.0.1 - - [04/May/2024 09:39:16] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
+2024-05-04 09:40:34,137 - INFO - Preprocessed Text : 0    bad servic recommend
+Name: tweet, dtype: object
+2024-05-04 09:40:34,139 - INFO - Vectorized Text : [[0. 0. 0. ... 0. 0. 0.]]
+2024-05-04 09:40:34,139 - INFO -  Prediction : negative
+2024-05-04 09:40:34,265 - INFO - 127.0.0.1 - - [04/May/2024 09:40:34] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-05-04 09:40:34,271 - INFO - ============== OPEN HOME PAGE =================
+2024-05-04 09:40:34,272 - INFO - 127.0.0.1 - - [04/May/2024 09:40:34] "GET / HTTP/1.1" 200 -
+2024-05-04 09:40:34,287 - INFO - 127.0.0.1 - - [04/May/2024 09:40:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2024-05-04 09:40:34,288 - INFO - 127.0.0.1 - - [04/May/2024 09:40:34] "[36mGET /static/products/feedback.jpg HTTP/1.1[0m" 304 -
